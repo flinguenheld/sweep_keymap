@@ -5,7 +5,7 @@ My keymap on aurora sweep with a pie
 
 #### Install
 
-Copy this repo in the folder :
+Clone this repo in the folder :
 
     ~/qmk_firmware/keyboards/splitkb/aurora/sweep/keymaps/
 
@@ -55,79 +55,65 @@ Use the standard us keymap :
 |   comma + i      |   î                    |
 |   comma + o      |   ô                    |
 |   comma + u      |   û                    |
-|   scolon + a     |   ä                    |
-|   scolon + e     |   ë                    |
-|   scolon + i     |   ï                    |
-|   scolon + o     |   ö                    |
-|   scolon + u     |   ü                    |
-|   scolon + y     |   ÿ                    |
+|   dot + a        |   ä                    |
+|   dot + e        |   ë                    |
+|   dot + i        |   ï                    |
+|   dot + o        |   ö                    |
+|   dot + u        |   ü                    |
+|   dot + y        |   ÿ                    |
 
-|      Keys        |                        |
-|------------------|------------------------|
-|   mouse + arrows |   adjust               |
-|   arrows + f     |   fn                   |
-|   enter + s      |   shifted enter        |
-
-|   Parenthesis    |                        |
-|------------------|------------------------|
-|   y + e          |   (                    |
-|   u + w          |   (                    |
-|   x + e          |   [                    |
-|   i + w          |   ]                    |
-|   y + i          |   {                    |
-|   u + x          |   }                    |
 
 #### Leader
 
-|   -                         |                        |
-|-----------------------------|------------------------|
-|   leader + M + S            |   mail short           |
-|   leader + M + L            |   mail long            |
-|   leader + D + E + G        |   °                    |
-|   leader + C + O + P        |   ©                    |
-|   leader + R + E + G        |   ®                    |
-|   leader + D + I + A        |   ø                    |
-|   leader + D + I + A + M    |   Ø                    |
-|   leader + E + U + R        |   €                    |
-|   leader + P + O + U        |   £                    |
-|   leader + Y + E + N        |   ¥                    |
-|   leader + C + E + N        |   ¢                    |
-|   leader + P + I            |   π                    |
-|   leader + P + I + I        |   Π                    |
-|   leader + O + M + E        |   ω                    |
-|   leader + O + M + E + G    |   Ω                    |
-|   leader + U + P + C        |   ⁰                    |
-|   leader + D + N + C        |   ₀                    |
+| -                  |                        |
+|--------------------|------------------------|
+|   M + S            |   mail short           |
+|   M + L            |   mail long            |
+|   D + E + G        |   °                    |
+|   C + O + P        |   ©                    |
+|   R + E + G        |   ®                    |
+|   D + I + A        |   ø                    |
+|   D + I + A + M    |   Ø                    |
+|   E + U + R        |   €                    |
+|   P + O + U        |   £                    |
+|   Y + E + N        |   ¥                    |
+|   C + E + N        |   ¢                    |
+|   P + I            |   π                    |
+|   P + I + I        |   Π                    |
+|   O + M + E        |   ω                    |
+|   O + M + E + G    |   Ω                    |
+|   U + P + C        |   ⁰                    |
+|   D + N + C        |   ₀                    |
 
-|   -                         |                        |
-|-----------------------------|------------------------|
-|   leader + M + U + L        |   ×                    |
-|   leader + D + I + V        |   ÷                    |
-|   leader + P + M            |   ±                    |
-|   leader + I + N + E        |   ≠                    |
-|   leader + A + L + M        |   ≈                    |
-|   leader + S + Q + U        |   √                    |
-|   leader + I + N + F        |   ∞                    |
-|   leader + < + <            |   ≤                    |
-|   leader + > + >            |   ≥                    |
-|   leader + Q + S + T        |   ¼                    |
-|   leader + Q + S + G        |   ½                    |
-|   leader + H + S + T        |   ¾                    |
+| -                  |                        |
+|--------------------|------------------------|
+|   M + U + L        |   ×                    |
+|   D + I + V        |   ÷                    |
+|   P + M            |   ±                    |
+|   I + N + E        |   ≠                    |
+|   A + L + M        |   ≈                    |
+|   S + Q + U        |   √                    |
+|   I + N + F        |   ∞                    |
+|   < + <            |   ≤                    |
+|   > + >            |   ≥                    |
+|   Q + S + T        |   ¼                    |
+|   Q + S + G        |   ½                    |
+|   H + S + T        |   ¾                    |
 
-|   -                         |                        |
-|-----------------------------|------------------------|
-|   leader + F + L + A        |   ⚡                   |
-|   leader + S + P + A        |   ✨                   |
-|   leader + O + W + D        |   ⛔                   |
-|   leader + C + O + F        |   ☕                   |
-|   leader + U + M + B        |   ☔                   |
-|   leader + Y + E + S        |   ✅                   |
-|   leader + N + O            |   ❎                   |
-|   leader + C + R + O        |   ❌                   |
-|   leader + ! + !            |   ❓                   |
-|   leader + ! +              |   ❗                   |
-|   leader + ! + ! + G        |   ❔                   |
-|   leader + ! + G            |   ❕                   |
+| -                  |                        |
+|--------------------|------------------------|
+|   F + L + A        |   ⚡                   |
+|   S + P + A        |   ✨                   |
+|   O + W + D        |   ⛔                   |
+|   C + O + F        |   ☕                   |
+|   U + M + B        |   ☔                   |
+|   Y + E + S        |   ✅                   |
+|   N + O            |   ❎                   |
+|   C + R + O        |   ❌                   |
+|   ! + !            |   ❓                   |
+|   ! +              |   ❗                   |
+|   ! + ! + G        |   ❔                   |
+|   ! + G            |   ❕                   |
 
 #### Layouts
 
@@ -138,4 +124,5 @@ Use the standard us keymap :
 ![adjust](https://raw.githubusercontent.com/FLinguenheld/sweep_keymap/main/images/adjust.png "layout")  
 ![fn](https://raw.githubusercontent.com/FLinguenheld/sweep_keymap/main/images/fn.png "layout")
 ![combo](https://raw.githubusercontent.com/FLinguenheld/sweep_keymap/main/images/combos.png "layout")
+![combo2](https://raw.githubusercontent.com/FLinguenheld/sweep_keymap/main/images/combos2.png "layout")
 

@@ -42,49 +42,45 @@ enum combos {
     E_O,
 
     // --
-    // ENTER_SHIFTED,
-    CONTROL_SHIFT,
-    CONTROL_ALT,
-    CONTROL_SHIFT_ALT,
-    RIGHT_ALT,
-    ALT_SHIFT,
-
-    // --
     AMPERSAND,
+    AT_SIGN,
     BACKSLASH,
     CIRCUMFLEX,
-    EQUAL,
-
-    QUOTE,
-    QUOTE_DOUBLE,
-    ANGLE_BRACKET_LEFT,
-    ANGLE_BRACKET_RIGHT,
-
-    EXCLAMATION_MARK,
-    QUESTION_MARK,
-
     COLON,
-    SEMICOLON,
-
+    DOLLAR,
+    EQUAL,
+    EXCLAMATION_MARK,
     GRAVE,
     HASH,
-    PIPE,
-    PERCENT,
     MINUS,
+    PERCENT,
+    PIPE,
     PLUS,
+    QUESTION_MARK,
+    QUOTE,
+    QUOTE_DOUBLE,
+    SEMICOLON,
     SLASH,
     STAR,
     TILDE,
     UNDERSCORE,
-    DOLLAR,
-    AT_SIGN,
 
-    PARENTHESIS_LEFT,
-    PARENTHESIS_RIGHT,
+    ANGLE_BRACKET_LEFT,
+    ANGLE_BRACKET_RIGHT,
+
     BRACKET_LEFT,
     BRACKET_RIGHT,
     CURLY_BRACKET_LEFT,
     CURLY_BRACKET_RIGHT,
+    PARENTHESIS_LEFT,
+    PARENTHESIS_RIGHT,
+
+    // --
+    ALT_SHIFT,
+    CONTROL_SHIFT,
+    CONTROL_ALT,
+    CONTROL_SHIFT_ALT,
+    RIGHT_ALT,
 
     // One hand special
     CONTROL_RIGHT,
@@ -142,48 +138,38 @@ const uint16_t PROGMEM combo_ea[] =                     {CS_E_ACUTE, KC_A, COMBO
 const uint16_t PROGMEM combo_eo[] =                     {CS_E_ACUTE, KC_O, COMBO_END};
 
 // --
-const uint16_t PROGMEM combo_pipe[] =                   {KC_E, KC_I, COMBO_END};
-const uint16_t PROGMEM combo_ampersand[] =              {KC_A, KC_E, COMBO_END};
-const uint16_t PROGMEM combo_tilde[] =                  {KC_A, KC_I, COMBO_END};
-
-const uint16_t PROGMEM combo_slash[] =                  {KC_S, KC_L, COMBO_END};
+const uint16_t PROGMEM combo_ampersand[] =              {KC_I, KC_E, COMBO_END};
+const uint16_t PROGMEM combo_at_sign[] =                {KC_Y, KC_W, COMBO_END};
 const uint16_t PROGMEM combo_backslash[] =              {KC_D, KC_R, COMBO_END};
-
-const uint16_t PROGMEM combo_hash[] =                   {KC_A, KC_O, COMBO_END};
-const uint16_t PROGMEM combo_percent[] =                {KC_O, KC_I, COMBO_END};
-const uint16_t PROGMEM combo_at_sign[] =                {KC_X, KC_W, COMBO_END};
-
 const uint16_t PROGMEM combo_circumflex[] =             {KC_T, KC_D, COMBO_END};
+const uint16_t PROGMEM combo_colon[] =                  {KC_C, KC_G, COMBO_END};
 const uint16_t PROGMEM combo_dollar[] =                 {KC_D, KC_L, COMBO_END};
-
-const uint16_t PROGMEM combo_star[] =                   {KC_S, KC_T, COMBO_END};
-const uint16_t PROGMEM combo_underscore[] =             {KC_S, KC_R, COMBO_END};
-
-const uint16_t PROGMEM combo_plus[] =                   {KC_T, KC_L, COMBO_END};
-const uint16_t PROGMEM combo_minus[] =                  {KC_T, KC_R, COMBO_END};
 const uint16_t PROGMEM combo_equal[] =                  {KC_T, KC_H, COMBO_END};
-
+const uint16_t PROGMEM combo_exclamation_mark[] =       {KC_O, KC_F, COMBO_END};
 const uint16_t PROGMEM combo_grave[] =                  {KC_T, KC_G, COMBO_END};
-
+const uint16_t PROGMEM combo_hash[] =                   {KC_I, KC_O, COMBO_END};
+const uint16_t PROGMEM combo_minus[] =                  {KC_T, KC_R, COMBO_END};
+const uint16_t PROGMEM combo_percent[] =                {KC_O, KC_U, COMBO_END};
+const uint16_t PROGMEM combo_pipe[] =                   {KC_E, KC_U, COMBO_END};
+const uint16_t PROGMEM combo_plus[] =                   {KC_T, KC_L, COMBO_END};
+const uint16_t PROGMEM combo_question_mark[] =          {KC_X, KC_O, COMBO_END};
 const uint16_t PROGMEM combo_quote[] =                  {KC_T, KC_N, COMBO_END};
-const uint16_t PROGMEM combo_quote_double[] =           {GUI_T(KC_ESC), KC_I, COMBO_END};
+const uint16_t PROGMEM combo_quote_double[] =           {KC_A, KC_U, COMBO_END};
+const uint16_t PROGMEM combo_semicolon[] =              {KC_G, KC_H, COMBO_END};
+const uint16_t PROGMEM combo_slash[] =                  {KC_S, KC_L, COMBO_END};
+const uint16_t PROGMEM combo_star[] =                   {KC_S, KC_T, COMBO_END};
+const uint16_t PROGMEM combo_tilde[] =                  {KC_I, KC_U, COMBO_END};
+const uint16_t PROGMEM combo_underscore[] =             {KC_S, KC_R, COMBO_END};
 
 const uint16_t PROGMEM combo_angle_bracket_left[] =     {KC_C, KC_S, COMBO_END};
 const uint16_t PROGMEM combo_angle_bracket_right[] =    {KC_S, KC_H, COMBO_END};
 
-const uint16_t PROGMEM combo_exclamation_mark[] =       {KC_O, KC_U, COMBO_END};
-const uint16_t PROGMEM combo_question_mark[] =          {KC_P, KC_D, COMBO_END};
-
-const uint16_t PROGMEM combo_colon[] =                  {KC_C, KC_G, COMBO_END};
-const uint16_t PROGMEM combo_semicolon[] =              {KC_G, KC_H, COMBO_END};
-
-// --
-const uint16_t PROGMEM combo_parenthesis_left[] =       {KC_Y, KC_I, COMBO_END};
-const uint16_t PROGMEM combo_parenthesis_right[] =      {KC_A, KC_X, COMBO_END};
-const uint16_t PROGMEM combo_bracket_left[] =           {KC_W, KC_I, COMBO_END};
-const uint16_t PROGMEM combo_bracket_right[] =          {KC_E, KC_X, COMBO_END};
-const uint16_t PROGMEM combo_curly_bracket_left[] =     {KC_Y, KC_E, COMBO_END};
-const uint16_t PROGMEM combo_curly_bracket_right[] =    {KC_A, KC_W, COMBO_END};
+const uint16_t PROGMEM combo_bracket_left[] =           {KC_B, KC_U, COMBO_END};
+const uint16_t PROGMEM combo_bracket_right[] =          {KC_I, KC_W, COMBO_END};
+const uint16_t PROGMEM combo_curly_bracket_left[] =     {KC_B, KC_E, COMBO_END};
+const uint16_t PROGMEM combo_curly_bracket_right[] =    {KC_I, KC_Y, COMBO_END};
+const uint16_t PROGMEM combo_parenthesis_left[] =       {KC_B, KC_U, COMBO_END};
+const uint16_t PROGMEM combo_parenthesis_right[] =      {KC_I, KC_W, COMBO_END};
 
 // One hand special
 const uint16_t PROGMEM combo_control_right[] =          {LT(_NUMERIC, KC_ENT), KC_R, COMBO_END};
@@ -232,47 +218,43 @@ combo_t key_combos[] = {
     [U_DIAERESIS] = COMBO(combo_u_diaeresis,                CS_U_DIAERESIS),
     [Y_DIAERESIS] = COMBO(combo_y_diaeresis,                CS_Y_DIAERESIS),
 
-    [C_CEDILLA] = COMBO(combo_c_cedilla,                        CS_C_CEDILLA),
-    [E_A] = COMBO(combo_ea,                                     CS_AE),
-    [E_O] = COMBO(combo_eo,                                     CS_OE),
+    [C_CEDILLA] = COMBO(combo_c_cedilla,                    CS_C_CEDILLA),
+    [E_A] = COMBO(combo_ea,                                 CS_AE),
+    [E_O] = COMBO(combo_eo,                                 CS_OE),
 
     // --
-    [AMPERSAND] = COMBO(combo_ampersand,                        KC_AMPR),
-
-    [QUOTE] = COMBO(combo_quote,                                KC_QUOTE),
-    [QUOTE_DOUBLE] = COMBO(combo_quote_double,                  KC_DOUBLE_QUOTE),
-
-    [ANGLE_BRACKET_LEFT] = COMBO(combo_angle_bracket_left,      KC_LABK),
-    [ANGLE_BRACKET_RIGHT] = COMBO(combo_angle_bracket_right,    KC_RABK),
-    [EXCLAMATION_MARK] = COMBO(combo_exclamation_mark,          KC_EXCLAIM),
-    [QUESTION_MARK] = COMBO(combo_question_mark,                KC_QUESTION),
-
-    [COLON] = COMBO(combo_colon,                                KC_COLON),
-    [SEMICOLON] = COMBO(combo_semicolon,                        KC_SEMICOLON),
-
+    [AMPERSAND] = COMBO(combo_ampersand,                    KC_AMPR),
+    [AT_SIGN] = COMBO(combo_at_sign,                        KC_AT),
     [BACKSLASH] = COMBO(combo_backslash,                    KC_BSLS),
     [CIRCUMFLEX] = COMBO(combo_circumflex,                  KC_CIRC),
+    [COLON] = COMBO(combo_colon,                            KC_COLON),
+    [DOLLAR] = COMBO(combo_dollar,                          KC_DLR),
     [EQUAL] = COMBO(combo_equal,                            KC_EQL),
+    [EXCLAMATION_MARK] = COMBO(combo_exclamation_mark,      KC_EXCLAIM),
     [GRAVE] = COMBO(combo_grave,                            KC_GRV),
     [HASH] = COMBO(combo_hash,                              KC_HASH),
+    [MINUS] = COMBO(combo_minus,                            KC_MINS),
     [PERCENT] = COMBO(combo_percent,                        KC_PERC),
     [PIPE] = COMBO(combo_pipe,                              KC_PIPE),
-    [MINUS] = COMBO(combo_minus,                            KC_MINS),
     [PLUS] = COMBO(combo_plus,                              KC_PLUS),
+    [QUESTION_MARK] = COMBO(combo_question_mark,            KC_QUESTION),
+    [QUOTE] = COMBO(combo_quote,                            KC_QUOTE),
+    [QUOTE_DOUBLE] = COMBO(combo_quote_double,              KC_DOUBLE_QUOTE),
+    [SEMICOLON] = COMBO(combo_semicolon,                    KC_SEMICOLON),
     [SLASH] = COMBO(combo_slash,                            KC_SLSH),
     [STAR] = COMBO(combo_star,                              KC_ASTR),
     [TILDE] = COMBO(combo_tilde,                            KC_TILD),
     [UNDERSCORE] = COMBO(combo_underscore,                  KC_UNDS),
-    [DOLLAR] = COMBO(combo_dollar,                          KC_DLR),
-    [AT_SIGN] = COMBO(combo_at_sign,                        KC_AT),
 
-    // --
-    [PARENTHESIS_LEFT] = COMBO(combo_parenthesis_left,          KC_LEFT_PAREN),
-    [PARENTHESIS_RIGHT] COMBO(combo_parenthesis_right,          KC_RIGHT_PAREN),
+    [ANGLE_BRACKET_LEFT] = COMBO(combo_angle_bracket_left,      KC_LABK),
+    [ANGLE_BRACKET_RIGHT] = COMBO(combo_angle_bracket_right,    KC_RABK),
+
     [BRACKET_LEFT] = COMBO(combo_bracket_left,                  KC_LEFT_BRACKET),
     [BRACKET_RIGHT] = COMBO(combo_bracket_right,                KC_RIGHT_BRACKET),
     [CURLY_BRACKET_LEFT] = COMBO(combo_curly_bracket_left,      KC_LEFT_CURLY_BRACE),
     [CURLY_BRACKET_RIGHT] = COMBO(combo_curly_bracket_right,    KC_RIGHT_CURLY_BRACE),
+    [PARENTHESIS_LEFT] = COMBO(combo_parenthesis_left,          KC_LEFT_PAREN),
+    [PARENTHESIS_RIGHT] COMBO(combo_parenthesis_right,          KC_RIGHT_PAREN),
 
     // One hand special
     [CONTROL_RIGHT] = COMBO(combo_control_right,                KC_RCTL),
