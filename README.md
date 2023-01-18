@@ -122,7 +122,6 @@ Use the standard us keymap :
 ![mouse](https://raw.githubusercontent.com/FLinguenheld/sweep_keymap/main/images/mouse.png "layout")  
 ![arrows](https://raw.githubusercontent.com/FLinguenheld/sweep_keymap/main/images/arrows.png "layout")  
 ![adjust](https://raw.githubusercontent.com/FLinguenheld/sweep_keymap/main/images/adjust.png "layout")  
-![fn](https://raw.githubusercontent.com/FLinguenheld/sweep_keymap/main/images/fn.png "layout")
-![combo](https://raw.githubusercontent.com/FLinguenheld/sweep_keymap/main/images/combos.png "layout")
-![combo2](https://raw.githubusercontent.com/FLinguenheld/sweep_keymap/main/images/combos2.png "layout")
-
+![fn](https://raw.githubusercontent.com/FLinguenheld/sweep_keymap/main/images/fn.png "layout")  
+![combo](https://raw.githubusercontent.com/FLinguenheld/sweep_keymap/main/images/combos.png "layout")  
+![combo2](https://raw.githubusercontent.com/FLinguenheld/sweep_keymap/main/images/combos2.png "layout")  
