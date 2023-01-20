@@ -142,20 +142,20 @@ const uint16_t PROGMEM combo_y_diaeresis[] =            {LT(_ARROWS, KC_DOT), KC
 
 // --
 const uint16_t PROGMEM combo_ampersand[] =              {KC_I, KC_E, COMBO_END};
-const uint16_t PROGMEM combo_at_sign[] =                {KC_Q, KC_W, COMBO_END};
+const uint16_t PROGMEM combo_at_sign[] =                {KC_Q, KC_Y, COMBO_END};
 const uint16_t PROGMEM combo_backslash[] =              {KC_D, KC_R, COMBO_END};
 const uint16_t PROGMEM combo_circumflex[] =             {KC_T, KC_D, COMBO_END};
 const uint16_t PROGMEM combo_colon[] =                  {KC_C, KC_G, COMBO_END};
 const uint16_t PROGMEM combo_dollar[] =                 {KC_D, KC_L, COMBO_END};
 const uint16_t PROGMEM combo_equal[] =                  {KC_T, KC_H, COMBO_END};
-const uint16_t PROGMEM combo_exclamation_mark[] =       {KC_O, KC_Y, COMBO_END};
+const uint16_t PROGMEM combo_exclamation_mark[] =       {KC_O, KC_W, COMBO_END};
 const uint16_t PROGMEM combo_grave[] =                  {KC_T, KC_G, COMBO_END};
 const uint16_t PROGMEM combo_hash[] =                   {KC_I, KC_O, COMBO_END};
 const uint16_t PROGMEM combo_minus[] =                  {KC_T, KC_R, COMBO_END};
 const uint16_t PROGMEM combo_percent[] =                {KC_O, KC_U, COMBO_END};
 const uint16_t PROGMEM combo_pipe[] =                   {KC_E, KC_U, COMBO_END};
 const uint16_t PROGMEM combo_plus[] =                   {KC_T, KC_L, COMBO_END};
-const uint16_t PROGMEM combo_question_mark[] =          {KC_X, KC_O, COMBO_END};
+const uint16_t PROGMEM combo_question_mark[] =          {KC_B, KC_O, COMBO_END};
 const uint16_t PROGMEM combo_quote[] =                  {KC_T, KC_N, COMBO_END};
 const uint16_t PROGMEM combo_quote_double[] =           {KC_A, KC_U, COMBO_END};
 const uint16_t PROGMEM combo_semicolon[] =              {KC_G, KC_H, COMBO_END};
@@ -168,11 +168,11 @@ const uint16_t PROGMEM combo_angle_bracket_left[] =     {KC_C, KC_S, COMBO_END};
 const uint16_t PROGMEM combo_angle_bracket_right[] =    {KC_S, KC_H, COMBO_END};
 
 const uint16_t PROGMEM combo_bracket_left[] =           {KC_Q, KC_U, COMBO_END};
-const uint16_t PROGMEM combo_bracket_right[] =          {KC_E, KC_W, COMBO_END};
-const uint16_t PROGMEM combo_curly_bracket_left[] =     {KC_B, KC_E, COMBO_END};
+const uint16_t PROGMEM combo_bracket_right[] =          {KC_E, KC_Y, COMBO_END};
+const uint16_t PROGMEM combo_curly_bracket_left[] =     {KC_X, KC_E, COMBO_END};
 const uint16_t PROGMEM combo_curly_bracket_right[] =    {KC_I, KC_Q, COMBO_END};
-const uint16_t PROGMEM combo_parenthesis_left[] =       {KC_B, KC_U, COMBO_END};
-const uint16_t PROGMEM combo_parenthesis_right[] =      {KC_I, KC_W, COMBO_END};
+const uint16_t PROGMEM combo_parenthesis_left[] =       {KC_X, KC_U, COMBO_END};
+const uint16_t PROGMEM combo_parenthesis_right[] =      {KC_I, KC_Y, COMBO_END};
 
 // One hand special
 const uint16_t PROGMEM combo_control_right[] =          {LT(_NUMERIC, KC_ENT), KC_R, COMBO_END};
@@ -180,7 +180,7 @@ const uint16_t PROGMEM combo_control_shift_right[] =    {LT(_NUMERIC, KC_ENT), K
 
 const uint16_t PROGMEM combo_shift_left[] =             {KC_LCPO, KC_LALT, COMBO_END};
 const uint16_t PROGMEM combo_altgr_left[] =             {LT(_MOUSE, KC_COMM), KC_LALT, COMBO_END};
-const uint16_t PROGMEM combo_del_left[] =               {GUI_T(KC_ESC), KC_TAB, COMBO_END};
+const uint16_t PROGMEM combo_del_left[] =               {GUI_T(KC_ESC), KC_K, COMBO_END};
 
 
 // --------------------------------------------------
