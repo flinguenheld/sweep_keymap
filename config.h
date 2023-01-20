@@ -5,8 +5,8 @@
 #pragma once
 
 /* Select hand configuration */
-#define MASTER_LEFT
-// #define MASTER_RIGHT
+// #define MASTER_LEFT
+#define MASTER_RIGHT
 
 // Useless ?
 // #ifdef CONVERT_TO_ELITE_PI
