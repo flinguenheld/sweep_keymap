@@ -53,11 +53,11 @@ void matrix_scan_user(void) {
       send_unicode_string("¢"); }
 
     // Fractions
-    SEQ_THREE_KEYS(KC_Q, KC_S, KC_T) {
+    SEQ_THREE_KEYS(KC_F, KC_C, KC_T) {
       send_unicode_string("¼"); }
-    SEQ_THREE_KEYS(KC_Q, KC_S, KC_G) {
+    SEQ_THREE_KEYS(KC_F, KC_C, KC_G) {
       send_unicode_string("½"); }
-    SEQ_THREE_KEYS(KC_H, KC_S, KC_T) {
+    SEQ_THREE_KEYS(KC_F, KC_H, KC_T) {
       send_unicode_string("¾"); }
 
     // Maths
@@ -209,13 +209,13 @@ void matrix_scan_user(void) {
       send_unicode_string("🐦"); }
 
     // Subscript / superscript
-    SEQ_THREE_KEYS(KC_U, KC_P, KC_C) {
+    SEQ_THREE_KEYS(KC_U, KC_P, KC_F) {
       send_unicode_string("⁰"); }
-    SEQ_THREE_KEYS(KC_D, KC_N, KC_C) {
+    SEQ_THREE_KEYS(KC_D, KC_N, KC_F) {
       send_unicode_string("₀"); }
-    SEQ_THREE_KEYS(KC_U, KC_P, KC_Q) {
+    SEQ_THREE_KEYS(KC_U, KC_P, KC_C) {
       send_unicode_string("¹"); }
-    SEQ_THREE_KEYS(KC_D, KC_N, KC_Q) {
+    SEQ_THREE_KEYS(KC_D, KC_N, KC_C) {
       send_unicode_string("₁"); }
     SEQ_THREE_KEYS(KC_U, KC_P, KC_G) {
       send_unicode_string("²"); }
@@ -237,9 +237,9 @@ void matrix_scan_user(void) {
       send_unicode_string("⁶"); }
     SEQ_THREE_KEYS(KC_D, KC_N, KC_R) {
       send_unicode_string("₆"); }
-    SEQ_THREE_KEYS(KC_U, KC_P, KC_V) {
+    SEQ_THREE_KEYS(KC_U, KC_P, KC_P) {
       send_unicode_string("⁷"); }
-    SEQ_THREE_KEYS(KC_D, KC_N, KC_V) {
+    SEQ_THREE_KEYS(KC_D, KC_N, KC_P) {
       send_unicode_string("₇"); }
     SEQ_THREE_KEYS(KC_U, KC_P, KC_D) {
       send_unicode_string("⁸"); }

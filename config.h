@@ -1,17 +1,12 @@
 /*
-    2022
+    FLinguenheld 2023
 */
 
 #pragma once
 
 /* Select hand configuration */
-// #define MASTER_LEFT
-#define MASTER_RIGHT
-
-// Useless ?
-// #ifdef CONVERT_TO_ELITE_PI
-// #   define USB_VBUS_PIN 19U
-// #endif
+#define MASTER_LEFT
+// #define MASTER_RIGHT
 
 
 // --------------------------------------------------------------------------------

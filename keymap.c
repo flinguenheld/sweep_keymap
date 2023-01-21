@@ -1,8 +1,7 @@
 /*
-QMK keymap for the crkbd keyboard 3x6
-Flo 2022
+QMK keymap for the Aurora sweep keyboard
+FLinguenheld 2023
 
-https://github.com/foostan/crkbd
 https://docs.qmk.fm/#/
 */
 

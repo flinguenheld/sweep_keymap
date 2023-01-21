@@ -29,7 +29,8 @@ and :
 
 [qmk](https://docs.qmk.fm/#/)  
 [ferris sweep](https://github.com/davidphilipbarr/Sweep)  
-[splitkb](https://splitkb.com)
+[splitkb](https://splitkb.com)  
+[bépo](https://bepo.fr/wiki/Accueil)
 
 #### Keymap
 
@@ -38,23 +39,35 @@ Use the standard us keymap :
 
     setxkbmap -layout us
 
-#### Combos
+#### Layouts
 
-|     French       |                        |
+![base](images/base.png)  
+![numeric](images/numeric.png)  
+![mouse](images/mouse.png)  
+![arrows](images/arrows.png)  
+![adjust](images/adjust.png)  
+![fn](images/fn.png)  
+![combo](images/combos.png)  
+![combo2](images/combos2.png)  
+
+#### French
+
+|        -         |                        |
 |------------------|------------------------|
-|   é + i          |   ç                    |
-|   é + a          |   æ                    |
-|   é + o          |   œ                    |
-|   space + a      |   à                    |
-|   space + e      |   è                    |
-|   space + i      |   ì                    |
-|   space + o      |   ò                    |
-|   space + u      |   ù                    |
-|   comma + a      |   â                    |
-|   comma + e      |   ê                    |
-|   comma + i      |   î                    |
-|   comma + o      |   ô                    |
-|   comma + u      |   û                    |
+|   space + e      |   é                    |
+|   space + i      |   ç                    |
+|   space + a      |   æ                    |
+|   space + o      |   œ                    |
+|   comma + a      |   à                    |
+|   comma + e      |   è                    |
+|   comma + i      |   ì                    |
+|   comma + o      |   ò                    |
+|   comma + u      |   ù                    |
+|   enter + a      |   â                    |
+|   enter + e      |   ê                    |
+|   enter + i      |   î                    |
+|   enter + o      |   ô                    |
+|   enter + u      |   û                    |
 |   dot + a        |   ä                    |
 |   dot + e        |   ë                    |
 |   dot + i        |   ï                    |
@@ -82,8 +95,8 @@ Use the standard us keymap :
 |   P + I + I        |   Π                    |
 |   O + M + E        |   ω                    |
 |   O + M + E + G    |   Ω                    |
-|   U + P + C        |   ⁰                    |
-|   D + N + C        |   ₀                    |
+|   U + P + F        |   ⁰                    |
+|   D + N + F        |   ₀                    |
 
 | -                  |                        |
 |--------------------|------------------------|
@@ -96,9 +109,9 @@ Use the standard us keymap :
 |   I + N + F        |   ∞                    |
 |   < + <            |   ≤                    |
 |   > + >            |   ≥                    |
-|   Q + S + T        |   ¼                    |
-|   Q + S + G        |   ½                    |
-|   H + S + T        |   ¾                    |
+|   F + S + T        |   ¼                    |
+|   F + S + G        |   ½                    |
+|   F + H + T        |   ¾                    |
 
 | -                  |                        |
 |--------------------|------------------------|
@@ -114,14 +127,3 @@ Use the standard us keymap :
 |   !                |   ❕                   |
 |   ? + ?            |   ❓                   |
 |   ! + !            |   ❗                   |
-
-#### Layouts
-
-![base](https://raw.githubusercontent.com/FLinguenheld/sweep_keymap/main/images/base.png "layout")  
-![numeric](https://raw.githubusercontent.com/FLinguenheld/sweep_keymap/main/images/numeric.png "layout")  
-![mouse](https://raw.githubusercontent.com/FLinguenheld/sweep_keymap/main/images/mouse.png "layout")  
-![arrows](https://raw.githubusercontent.com/FLinguenheld/sweep_keymap/main/images/arrows.png "layout")  
-![adjust](https://raw.githubusercontent.com/FLinguenheld/sweep_keymap/main/images/adjust.png "layout")  
-![fn](https://raw.githubusercontent.com/FLinguenheld/sweep_keymap/main/images/fn.png "layout")  
-![combo](https://raw.githubusercontent.com/FLinguenheld/sweep_keymap/main/images/combos.png "layout")  
-![combo2](https://raw.githubusercontent.com/FLinguenheld/sweep_keymap/main/images/combos2.png "layout")  
