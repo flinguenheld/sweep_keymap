@@ -3,6 +3,22 @@ My keymap on aurora sweep with a pie
 
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 
+
+This keymap is inspired by [optimot](https://bepo.fr/) which is a French layout.  
+Nonetheless all French characters are sent in unicode, so it works with the standard US ANSI layout.
+
+It uses the *best* qmk features :
+- combos ♥
+- auto shift
+- leader
+
+I tried to optimise key positions for neovim and i3wm while limit digrams.  
+The oled screens are used to display the current layout, the modifier keys and the leader key.  
+
+![oledmouse](https://i.imgur.com/PwkR6P2.png)
+![oledmodifiers](https://i.imgur.com/on95jx0.png)
+
+
 #### Install
 
 Clone this repo in the folder :
@@ -30,14 +46,6 @@ and :
 [qmk](https://docs.qmk.fm/#/)  
 [ferris sweep](https://github.com/davidphilipbarr/Sweep)  
 [splitkb](https://splitkb.com)  
-[bépo](https://bepo.fr/wiki/Accueil)
-
-#### Keymap
-
-All french letters are print with unicode.
-Use the standard us keymap :
-
-    setxkbmap -layout us
 
 #### Layouts
 
