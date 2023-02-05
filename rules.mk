@@ -1,11 +1,11 @@
-# Recommended by the doc to improve compilation :
 LTO_ENABLE = yes
 SPLIT_KEYBOARD = yes
-
-
-BOOTLOADER = rp2040
 CONVERT_TO = elite_pi
 
+SRC += features/auto_shift.c
+SRC += features/combo.c
+SRC += features/leader.c
+SRC += oled/oled.c
 
 OLED_ENABLE = yes
 OLED_DRIVER = SSD1306

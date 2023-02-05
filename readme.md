@@ -1,7 +1,4 @@
-### sweep keymap
-My keymap on aurora sweep with a pie
-
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+### Custom aurora sweep keymap
 
 
 This keymap is inspired by [optimot](https://bepo.fr/) which is a French layout.  
@@ -15,9 +12,8 @@ It uses the *best* qmk features :
 I tried to optimise key positions for neovim and i3wm while limit digrams.  
 The oled screens are used to display the current layout, the modifier keys and the leader key.  
 
-![oledmouse](https://i.imgur.com/PwkR6P2.png)
 ![oledmodifiers](https://i.imgur.com/on95jx0.png)
-
+![oledmouse](https://i.imgur.com/PwkR6P2.png)
 
 #### Install
 
@@ -27,12 +23,7 @@ Clone this repo in the folder :
 
 #### Compile and flash
 
-Change the master in the config.h file :
-
-    // #define MASTER_LEFT
-    #define MASTER_RIGHT
-
-then :
+Navigate into the keymap folder and launch this command for both sides :
 
     qmk compile && qmk flash
 
@@ -57,6 +48,7 @@ and :
 ![fn](images/fn.png)  
 ![combo](images/combos.png)  
 ![combo2](images/combos2.png)  
+![combo3](images/combos3.png)  
 
 #### French
 

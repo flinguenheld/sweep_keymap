@@ -1,7 +1,9 @@
-LEADER_EXTERNS();
+// Copyright 2023 Florent Linguenheld (@FLinguenheld)
+// SPDX-License-Identifier: GPL-2.0-or-later
 
-/* Display the leader key (Only on the master now :(, this bool has to be sync with the slave) */
-static bool     is_leader_active = false;
+#include QMK_KEYBOARD_H
+
+LEADER_EXTERNS();
 
 void matrix_scan_user(void) {
   LEADER_DICTIONARY() {
@@ -145,14 +147,24 @@ void matrix_scan_user(void) {
 
     SEQ_TWO_KEYS(KC_O, KC_K) {
       send_unicode_string("👌"); }
-    SEQ_THREE_KEYS(KC_Y, KC_E, KC_S) {
-      send_unicode_string("✅"); }
-    SEQ_TWO_KEYS(KC_N, KC_O) {
-      send_unicode_string("❎"); }
-    SEQ_THREE_KEYS(KC_C, KC_R, KC_O) {
-      send_unicode_string("❌"); }
     SEQ_THREE_KEYS(KC_O, KC_W, KC_D) {
       send_unicode_string("⛔"); }
+
+    SEQ_ONE_KEY(KC_V) {
+      send_unicode_string("✓"); }
+    SEQ_TWO_KEYS(KC_V, KC_B) {
+      send_unicode_string("☑"); }
+    SEQ_TWO_KEYS(KC_V, KC_G) {
+      send_unicode_string("✅"); }
+
+    SEQ_ONE_KEY(KC_X) {
+      send_unicode_string("✗"); }
+    SEQ_TWO_KEYS(KC_X, KC_B) {
+      send_unicode_string("☒"); }
+    SEQ_TWO_KEYS(KC_X, KC_G) {
+      send_unicode_string("❎"); }
+    SEQ_TWO_KEYS(KC_X, KC_R) {
+      send_unicode_string("❌"); }
 
     SEQ_ONE_KEY(KC_QUESTION) {
       send_unicode_string("❔"); }
@@ -250,14 +262,5 @@ void matrix_scan_user(void) {
     SEQ_THREE_KEYS(KC_D, KC_N, KC_L) {
       send_unicode_string("₉"); }
 
-  }
-}
-
-/* Set a bool for the oled screen */
-void leader_start(void) {
-    is_leader_active = true;
-}
-
-void leader_end(void) {
-    is_leader_active = false;
+  };
 }

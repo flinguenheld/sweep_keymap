@@ -1,3 +1,9 @@
+// Copyright 2023 Florent Linguenheld (@FLinguenheld)
+// SPDX-License-Identifier: GPL-2.0-or-later
+
+#include QMK_KEYBOARD_H
+#include "keycodes.h"
+
 /* How to :
         - Add an entry in the enum
         - Create a new sequence of keys
@@ -85,10 +91,10 @@ enum combos {
     CONTROL_RIGHT,
     CONTROL_SHIFT_RIGHT,
 
-    DEL_LEFT,
+    // DEL_LEFT,
     SHIFT_LEFT,
-    ALT_LEFT,
     ALTGR_LEFT,
+    CONTROL_SHIFT_LEFT,
 
     /* Just to replace the define in config.h */
     COMBO_LENGTH,
@@ -98,7 +104,7 @@ uint16_t COMBO_LEN = COMBO_LENGTH;
 
 /* Sequences fo keys */
 const uint16_t PROGMEM combo_leader[] =                 {LT(_MOUSE, KC_COMM), LT(_ARROWS, KC_DOT), COMBO_END};
-const uint16_t PROGMEM combo_bootloader[] =             {KC_K, KC_TAB, KC_Z, KC_J, KC_F, KC_V, COMBO_END};
+const uint16_t PROGMEM combo_bootloader[] =             {KC_K, KC_TAB, KC_Z, KC_BSPC, KC_V, KC_J, COMBO_END};
 
 const uint16_t PROGMEM combo_adjust[] =                 {KC_LCPO, LT(_NUMERIC, KC_ENT), COMBO_END};
 const uint16_t PROGMEM combo_fn[] =                     {LT(_NUMERIC, KC_ENT), KC_N, COMBO_END};
@@ -123,18 +129,18 @@ const uint16_t PROGMEM combo_i_grave[] =                {LT(_MOUSE, KC_COMM), KC
 const uint16_t PROGMEM combo_o_grave[] =                {LT(_MOUSE, KC_COMM), KC_O, COMBO_END};
 const uint16_t PROGMEM combo_u_grave[] =                {LT(_MOUSE, KC_COMM), KC_U, COMBO_END};
 
-const uint16_t PROGMEM combo_a_circumflex[] =           {LT(_NUMERIC, KC_ENT), KC_A, COMBO_END};
-const uint16_t PROGMEM combo_e_circumflex[] =           {LT(_NUMERIC, KC_ENT), KC_E, COMBO_END};
-const uint16_t PROGMEM combo_i_circumflex[] =           {LT(_NUMERIC, KC_ENT), KC_I, COMBO_END};
-const uint16_t PROGMEM combo_o_circumflex[] =           {LT(_NUMERIC, KC_ENT), KC_O, COMBO_END};
-const uint16_t PROGMEM combo_u_circumflex[] =           {LT(_NUMERIC, KC_ENT), KC_U, COMBO_END};
+const uint16_t PROGMEM combo_a_circumflex[] =           {KC_C, KC_A, COMBO_END};
+const uint16_t PROGMEM combo_e_circumflex[] =           {KC_C, KC_E, COMBO_END};
+const uint16_t PROGMEM combo_i_circumflex[] =           {KC_C, KC_I, COMBO_END};
+const uint16_t PROGMEM combo_o_circumflex[] =           {KC_C, KC_O, COMBO_END};
+const uint16_t PROGMEM combo_u_circumflex[] =           {KC_C, KC_U, COMBO_END};
 
-const uint16_t PROGMEM combo_a_diaeresis[] =            {LT(_ARROWS, KC_DOT), KC_A, COMBO_END};
-const uint16_t PROGMEM combo_e_diaeresis[] =            {LT(_ARROWS, KC_DOT), KC_E, COMBO_END};
-const uint16_t PROGMEM combo_i_diaeresis[] =            {LT(_ARROWS, KC_DOT), KC_I, COMBO_END};
-const uint16_t PROGMEM combo_o_diaeresis[] =            {LT(_ARROWS, KC_DOT), KC_O, COMBO_END};
-const uint16_t PROGMEM combo_u_diaeresis[] =            {LT(_ARROWS, KC_DOT), KC_U, COMBO_END};
-const uint16_t PROGMEM combo_y_diaeresis[] =            {LT(_ARROWS, KC_DOT), KC_Y, COMBO_END};
+const uint16_t PROGMEM combo_a_diaeresis[] =            {KC_T, KC_A, COMBO_END};
+const uint16_t PROGMEM combo_e_diaeresis[] =            {KC_T, KC_E, COMBO_END};
+const uint16_t PROGMEM combo_i_diaeresis[] =            {KC_T, KC_I, COMBO_END};
+const uint16_t PROGMEM combo_o_diaeresis[] =            {KC_T, KC_O, COMBO_END};
+const uint16_t PROGMEM combo_u_diaeresis[] =            {KC_T, KC_U, COMBO_END};
+const uint16_t PROGMEM combo_y_diaeresis[] =            {KC_T, KC_Y, COMBO_END};
 
 /* -- */
 const uint16_t PROGMEM combo_ampersand[] =              {KC_I, KC_E, COMBO_END};
@@ -175,8 +181,9 @@ const uint16_t PROGMEM combo_control_right[] =          {LT(_NUMERIC, KC_ENT), K
 const uint16_t PROGMEM combo_control_shift_right[] =    {LT(_NUMERIC, KC_ENT), KC_S, COMBO_END};
 
 const uint16_t PROGMEM combo_shift_left[] =             {KC_LCPO, KC_LALT, COMBO_END};
-const uint16_t PROGMEM combo_altgr_left[] =             {LT(_MOUSE, KC_COMM), KC_LALT, COMBO_END};
-const uint16_t PROGMEM combo_del_left[] =               {GUI_T(KC_ESC), KC_K, COMBO_END};
+// const uint16_t PROGMEM combo_altgr_left[] =             {LT(_MOUSE, KC_COMM), KC_LALT, COMBO_END};
+// const uint16_t PROGMEM combo_del_left[] =               {GUI_T(KC_ESC), KC_K, COMBO_END};
+const uint16_t PROGMEM combo_control_shift_left[] =     {LT(_MOUSE, KC_COMM), KC_LALT, COMBO_END};
 
 
 /* Sequences fo keys */
@@ -259,6 +266,7 @@ combo_t key_combos[] = {
     [CONTROL_SHIFT_RIGHT] = COMBO(combo_control_shift_right,    C(S(XXXXXXX))),
 
     [SHIFT_LEFT] = COMBO(combo_shift_left,                      KC_LSFT),
-    [ALTGR_LEFT] = COMBO(combo_altgr_left,                      KC_ALGR),
-    [DEL_LEFT] = COMBO(combo_del_left,                          KC_BSPC),
+    // [ALTGR_LEFT] = COMBO(combo_altgr_left,                      KC_ALGR),
+    [CONTROL_SHIFT_LEFT] = COMBO(combo_control_shift_left,      C(S(XXXXXXX))),
+    // [DEL_LEFT] = COMBO(combo_del_left,                          KC_BSPC),
 };
