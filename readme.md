@@ -46,6 +46,7 @@ and :
 ![arrows](images/arrows.png)  
 ![adjust](images/adjust.png)  
 ![fn](images/fn.png)  
+![left hand](images/left_hand.png)  
 ![combo](images/combos.png)  
 ![combo2](images/combos2.png)  
 ![combo3](images/combos3.png)  
