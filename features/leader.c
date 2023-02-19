@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include QMK_KEYBOARD_H
+#include <stdlib.h>
 
 LEADER_EXTERNS();
 
@@ -13,7 +14,6 @@ void matrix_scan_user(void) {
     // SEQ_ONE_KEY(KC_F) {
       // // Anything you can do in a macro.
       // SEND_STRING("QMK is awesome."); }
-
 
     SEQ_TWO_KEYS(KC_M, KC_S) {
       SEND_STRING("f@linguenheld.fr"); }
@@ -27,6 +27,10 @@ void matrix_scan_user(void) {
     SEQ_THREE_KEYS(KC_A, KC_D, KC_M) {
       SEND_STRING("admin01234"); }
 
+    SEQ_ONE_KEY(KC_C) {
+      SEND_STRING(" | xclip -r -selection clipboard"); }
+    SEQ_THREE_KEYS(KC_G, KC_I, KC_T) {
+      SEND_STRING("keyring get git token\n"); }
 
     /* Degree */
     SEQ_THREE_KEYS(KC_D, KC_E, KC_G) {
