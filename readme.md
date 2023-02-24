@@ -2,7 +2,7 @@
 
 
 This keymap is inspired by [optimot](https://bepo.fr/) which is a French layout.  
-Nonetheless it uses the US international keymap, except for the Œ which is send in unicode.
+Nonetheless it uses the US international keymap, except for "Œ" which is sent in unicode.
 
 It uses the *best* qmk features :
 - combos ♥

@@ -88,8 +88,8 @@ enum combos {
     CONTROL_SHIFT_RIGHT,
 
     // DEL_LEFT,
+    ALT_LEFT,
     SHIFT_LEFT,
-    ALTGR_LEFT,
     CONTROL_SHIFT_LEFT,
 
     /* Just to replace the define in config.h */
@@ -104,7 +104,7 @@ const uint16_t PROGMEM combo_bootloader[] =             {KC_K, KC_TAB, KC_Z, KC_
 
 const uint16_t PROGMEM combo_adjust[] =                 {KC_LCPO, LT(_NUMERIC, KC_ENT), COMBO_END};
 const uint16_t PROGMEM combo_fn[] =                     {LT(_NUMERIC, KC_ENT), KC_N, COMBO_END};
-const uint16_t PROGMEM combo_left_hand[] =              {KC_LCPO, KC_A, COMBO_END};
+const uint16_t PROGMEM combo_left_hand[] =              {LT(_MOUSE, KC_COMM), GUI_T(KC_ESC), COMBO_END};
 
 /* -- */
 // const uint16_t PROGMEM combo_enter_shifted[] =          {LT(_NUMERIC, KC_ENT), KC_S, COMBO_END};
@@ -172,9 +172,8 @@ const uint16_t PROGMEM combo_parenthesis_right[] =      {KC_I, KC_Y, COMBO_END};
 const uint16_t PROGMEM combo_control_right[] =          {LT(_NUMERIC, KC_ENT), KC_R, COMBO_END};
 const uint16_t PROGMEM combo_control_shift_right[] =    {LT(_NUMERIC, KC_ENT), KC_S, COMBO_END};
 
-const uint16_t PROGMEM combo_shift_left[] =             {KC_LCPO, KC_LALT, COMBO_END};
-// const uint16_t PROGMEM combo_altgr_left[] =             {LT(_MOUSE, KC_COMM), KC_LALT, COMBO_END};
-// const uint16_t PROGMEM combo_del_left[] =               {GUI_T(KC_ESC), KC_K, COMBO_END};
+const uint16_t PROGMEM combo_shift_left[] =             {LT(_MOUSE, KC_COMM), US_EACU, COMBO_END};
+const uint16_t PROGMEM combo_alt_left[] =               {KC_LCPO, US_EACU, COMBO_END};
 const uint16_t PROGMEM combo_control_shift_left[] =     {KC_LCPO, GUI_T(KC_ESC), COMBO_END};
 
 
@@ -254,7 +253,6 @@ combo_t key_combos[] = {
     [CONTROL_SHIFT_RIGHT] = COMBO(combo_control_shift_right,    C(S(XXXXXXX))),
 
     [SHIFT_LEFT] = COMBO(combo_shift_left,                      KC_LSFT),
-    // [ALTGR_LEFT] = COMBO(combo_altgr_left,                      KC_ALGR),
+    [ALT_LEFT] = COMBO(combo_alt_left,                          KC_LALT),
     [CONTROL_SHIFT_LEFT] = COMBO(combo_control_shift_left,      C(S(XXXXXXX))),
-    // [DEL_LEFT] = COMBO(combo_del_left,                          KC_BSPC),
 };

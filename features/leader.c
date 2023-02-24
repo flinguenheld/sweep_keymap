@@ -3,6 +3,8 @@
 
 #include QMK_KEYBOARD_H
 #include <stdlib.h>
+#include "keycodes.h"
+
 
 LEADER_EXTERNS();
 
@@ -42,7 +44,7 @@ void matrix_scan_user(void) {
 
     /* Degree */
     SEQ_THREE_KEYS(KC_D, KC_E, KC_G) {
-      send_unicode_string("°"); }
+      tap_code16(US_DEG); }
 
     /* Copyright / Register */
     SEQ_THREE_KEYS(KC_C, KC_O, KC_P) {
@@ -52,19 +54,19 @@ void matrix_scan_user(void) {
 
     /* Diameter */
     SEQ_THREE_KEYS(KC_D, KC_I, KC_A) {
-      send_unicode_string("ø"); }
+      tap_code16(US_OSTR); }
     SEQ_FOUR_KEYS(KC_D, KC_I, KC_A, KC_M) {
       send_unicode_string("Ø"); }
 
     /* Currency */
     SEQ_THREE_KEYS(KC_E, KC_U, KC_R) {
-      send_unicode_string("€"); }
+      tap_code16(US_EURO); }
     SEQ_THREE_KEYS(KC_P, KC_O, KC_U) {
-      send_unicode_string("£"); }
+      tap_code16(US_PND); }
     SEQ_THREE_KEYS(KC_Y, KC_E, KC_N) {
-      send_unicode_string("¥"); }
+      tap_code16(US_YEN); }
     SEQ_THREE_KEYS(KC_C, KC_E, KC_N) {
-      send_unicode_string("¢"); }
+      tap_code16(US_CENT); }
 
     /* Fractions */
     SEQ_THREE_KEYS(KC_F, KC_C, KC_T) {

@@ -16,6 +16,7 @@
 
 #include QMK_KEYBOARD_H
 #include "keycodes.h"
+#include "keymap_us_international.h"
 
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
@@ -25,14 +26,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
         case UNICODE:
             if (record->event.pressed) {
-                register_code(KC_LCTL);
-                register_code(KC_LSFT);
-                tap_code16(KC_U);
-            } else {
-                unregister_code(KC_LCTL);
-                unregister_code(KC_LSFT);
+                tap_code16(C(S(KC_U)));
             } break;
 
+        // Add a space to dead keys
         case CS_CIRCUMFLEX:
             if (record->event.pressed) {
                 tap_code16(KC_CIRCUMFLEX);
@@ -84,7 +81,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //|---------------+---------------+---------------+---------------+---------------|       |---------------+---------------+---------------+---------------+---------------|
            XXXXXXX    ,    XXXXXXX    ,    XXXXXXX    ,    XXXXXXX    ,    _______    ,            XXXXXXX    ,     KC_4      ,     KC_5      ,     KC_6      ,     KC_0      ,
     //|---------------+---------------+---------------+---------------+---------------|       |---------------+---------------+---------------+---------------+---------------|
-           _______    ,    XXXXXXX    ,    XXXXXXX    ,    XXXXXXX    ,    XXXXXXX    ,            XXXXXXX    ,     KC_1      ,     KC_2      ,     KC_3      ,    KC_COMM    ,
+           XXXXXXX    ,    XXXXXXX    ,    XXXXXXX    ,    XXXXXXX    ,    XXXXXXX    ,            XXXXXXX    ,     KC_1      ,     KC_2      ,     KC_3      ,    KC_COMM    ,
     //|---------------+---------------+---------------+---------------+---------------|       |---------------+---------------+---------------+---------------+---------------|
     //                               |-------------------------+-------------------------| |-------------------------+-------------------------|
                                                 XXXXXXX        ,         UNICODE         ,          XXXXXXX          ,       XXXXXXX
@@ -110,7 +107,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //|---------------+---------------+---------------+---------------+---------------|       |---------------+---------------+---------------+---------------+---------------|
            XXXXXXX    ,    XXXXXXX    ,    XXXXXXX    ,    XXXXXXX    ,    _______    ,            XXXXXXX    ,    KC_LEFT    ,    KC_DOWN    ,     KC_UP     ,    KC_RIGHT   ,
     //|---------------+---------------+---------------+---------------+---------------|       |---------------+---------------+---------------+---------------+---------------|
-           _______    ,    XXXXXXX    ,    XXXXXXX    ,    XXXXXXX    ,    XXXXXXX    ,            XXXXXXX    ,    XXXXXXX    ,    C(KC_D)    ,    C(KC_U)    ,    XXXXXXX    ,
+           XXXXXXX    ,    XXXXXXX    ,    XXXXXXX    ,    XXXXXXX    ,    XXXXXXX    ,            XXXXXXX    ,    XXXXXXX    ,    C(KC_D)    ,    C(KC_U)    ,    XXXXXXX    ,
     //|---------------+---------------+---------------+---------------+---------------|       |---------------+---------------+---------------+---------------+---------------|
     //                               |-------------------------+-------------------------| |-------------------------+-------------------------|
                                                 XXXXXXX        ,        _______          ,           XXXXXXX         ,       XXXXXXX
@@ -149,7 +146,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //|---------------+---------------+---------------+---------------+---------------|       |---------------+---------------+---------------+---------------+---------------|
            XXXXXXX    ,    KC_CUT     ,    KC_COPY    ,    KC_PASTE   ,    _______    ,            XXXXXXX    ,    XXXXXXX    ,    XXXXXXX    ,    XXXXXXX    ,    XXXXXXX    ,
     //|---------------+---------------+---------------+---------------+---------------|       |---------------+---------------+---------------+---------------+---------------|
-           _______    ,    XXXXXXX    ,    XXXXXXX    ,    C(KC_Z)    ,    XXXXXXX    ,            XXXXXXX    ,    XXXXXXX    ,    XXXXXXX    ,    XXXXXXX    ,    XXXXXXX    ,
+           XXXXXXX    ,    XXXXXXX    ,    XXXXXXX    ,    C(KC_Z)    ,    XXXXXXX    ,            XXXXXXX    ,    XXXXXXX    ,    XXXXXXX    ,    XXXXXXX    ,    XXXXXXX    ,
     //|---------------+---------------+---------------+---------------+---------------|       |---------------+---------------+---------------+---------------+---------------|
     //                               |-------------------------+-------------------------| |-------------------------+-------------------------|
                                                 XXXXXXX        ,        _______          ,           XXXXXXX         ,       XXXXXXX
