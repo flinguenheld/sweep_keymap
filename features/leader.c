@@ -30,7 +30,15 @@ void matrix_scan_user(void) {
     SEQ_ONE_KEY(KC_C) {
       SEND_STRING(" | xclip -r -selection clipboard"); }
     SEQ_THREE_KEYS(KC_G, KC_I, KC_T) {
-      SEND_STRING("keyring get git token\n"); }
+        register_code(KC_LEFT_GUI);
+        register_code(KC_LEFT_SHIFT);
+        register_code(KC_LEFT_CTRL);
+        register_code(KC_G);
+        unregister_code(KC_G);
+        unregister_code(KC_LEFT_GUI);
+        unregister_code(KC_LEFT_SHIFT);
+        unregister_code(KC_LEFT_CTRL);
+    };
 
     /* Degree */
     SEQ_THREE_KEYS(KC_D, KC_E, KC_G) {

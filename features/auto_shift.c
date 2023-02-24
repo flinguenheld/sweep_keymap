@@ -73,10 +73,8 @@ bool get_custom_auto_shifted_key(uint16_t keycode, keyrecord_t *record) {
         case CS_O_CIRCUMFLEX:
         case CS_U_CIRCUMFLEX:
 
-        case CS_A_DIAERESIS:
         case CS_E_DIAERESIS:
         case CS_I_DIAERESIS:
-        case CS_O_DIAERESIS:
         case CS_U_DIAERESIS:
         case CS_Y_DIAERESIS:
 
@@ -144,18 +142,12 @@ void autoshift_press_user(uint16_t keycode, bool shifted, keyrecord_t *record) {
             if (shifted) { send_unicode_string("Û"); }
             else         { send_unicode_string("û"); }  break;
 
-        case CS_A_DIAERESIS:
-            if (shifted) { send_unicode_string("Ä"); }
-            else         { send_unicode_string("ä"); }  break;
         case CS_E_DIAERESIS:
             if (shifted) { send_unicode_string("Ë"); }
             else         { send_unicode_string("ë"); }  break;
         case CS_I_DIAERESIS:
             if (shifted) { send_unicode_string("Ï"); }
             else         { send_unicode_string("ï"); }  break;
-        case CS_O_DIAERESIS:
-            if (shifted) { send_unicode_string("Ö"); }
-            else         { send_unicode_string("ö"); }  break;
         case CS_U_DIAERESIS:
             if (shifted) { send_unicode_string("Ü"); }
             else         { send_unicode_string("ü"); }  break;
