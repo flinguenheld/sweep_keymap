@@ -31,8 +31,33 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             } else {
                 unregister_code(KC_LCTL);
                 unregister_code(KC_LSFT);
-            }
-            break;
+            } break;
+
+        case CS_CIRCUMFLEX:
+            if (record->event.pressed) {
+                tap_code16(KC_CIRCUMFLEX);
+                tap_code16(KC_SPACE);
+            } break;
+        case CS_GRAVE:
+            if (record->event.pressed) {
+                tap_code16(KC_GRAVE);
+                tap_code16(KC_SPACE);
+            } break;
+        case CS_QUOTE:
+            if (record->event.pressed) {
+                tap_code16(KC_QUOTE);
+                tap_code16(KC_SPACE);
+            } break;
+        case CS_QUOTE_DOUBLE:
+            if (record->event.pressed) {
+                tap_code16(KC_DOUBLE_QUOTE);
+                tap_code16(KC_SPACE);
+            } break;
+        case CS_TILDE:
+            if (record->event.pressed) {
+                tap_code16(KC_TILD);
+                tap_code16(KC_SPACE);
+            } break;
     }
 
     return true;
@@ -46,7 +71,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //|---------------+---------------+---------------+---------------+---------------|       |---------------+---------------+---------------+---------------+---------------|
             KC_A      ,     KC_I      ,     KC_E      ,     KC_U      ,     KC_TAB    ,             KC_V      ,      KC_T     ,      KC_S     ,      KC_R     ,      KC_N     ,
     //|---------------+---------------+---------------+---------------+---------------|       |---------------+---------------+---------------+---------------+---------------|
-         CS_E_ACUTE   ,     KC_X      ,     KC_Q      ,     KC_Y      ,      KC_K     ,             KC_Z      ,      KC_C     ,      KC_G     ,      KC_H     ,      KC_M     ,
+           US_EACU    ,     KC_X      ,     KC_Q      ,     KC_Y      ,      KC_K     ,             KC_Z      ,      KC_C     ,      KC_G     ,      KC_H     ,      KC_M     ,
     //|---------------+---------------+---------------+---------------+---------------|       |---------------+---------------+---------------+---------------+---------------|
     //                               |-------------------------+-------------------------| |-------------------------+-------------------------|
                                           LT(_MOUSE, KC_COMM)  ,        KC_LCPO          ,    LT(_NUMERIC, KC_ENT)   ,  LT(_ARROWS, KC_DOT)

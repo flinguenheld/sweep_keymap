@@ -2,7 +2,7 @@
 
 
 This keymap is inspired by [optimot](https://bepo.fr/) which is a French layout.  
-Nonetheless all French characters are sent in unicode, so it works with the standard US ANSI layout.
+Nonetheless it uses the US international keymap, except for the Œ which is send in unicode.
 
 It uses the *best* qmk features :
 - combos ♥
@@ -50,31 +50,7 @@ and :
 ![combo](images/combos.png)  
 ![combo2](images/combos2.png)  
 ![combo3](images/combos3.png)  
-
-#### French
-
-|        -         |                        |
-|------------------|------------------------|
-|   space + e      |   é                    |
-|   space + i      |   ç                    |
-|   space + a      |   æ                    |
-|   space + o      |   œ                    |
-|   comma + a      |   à                    |
-|   comma + e      |   è                    |
-|   comma + i      |   ì                    |
-|   comma + o      |   ò                    |
-|   comma + u      |   ù                    |
-|   enter + a      |   â                    |
-|   enter + e      |   ê                    |
-|   enter + i      |   î                    |
-|   enter + o      |   ô                    |
-|   enter + u      |   û                    |
-|   dot + a        |   ä                    |
-|   dot + e        |   ë                    |
-|   dot + i        |   ï                    |
-|   dot + o        |   ö                    |
-|   dot + u        |   ü                    |
-|   dot + y        |   ÿ                    |
+![combo4](images/combos4.png)  
 
 
 #### Leader

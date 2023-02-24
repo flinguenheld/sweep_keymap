@@ -13,6 +13,10 @@ bool get_auto_shifted_key(uint16_t keycode, keyrecord_t *record) {
         case KC_TAB:
         case KC_ENT:
 
+        case US_EACU:
+        case US_CCED:
+        case US_AE:
+
         // --
         case KC_A:
         case KC_B:
@@ -59,12 +63,8 @@ bool get_custom_auto_shifted_key(uint16_t keycode, keyrecord_t *record) {
         case KC_RABK:
 
         /* French */
-        case CS_E_ACUTE:
-
         case CS_A_GRAVE:
         case CS_E_GRAVE:
-        case CS_I_GRAVE:
-        case CS_O_GRAVE:
         case CS_U_GRAVE:
 
         case CS_A_CIRCUMFLEX:
@@ -78,8 +78,6 @@ bool get_custom_auto_shifted_key(uint16_t keycode, keyrecord_t *record) {
         case CS_U_DIAERESIS:
         case CS_Y_DIAERESIS:
 
-        case CS_C_CEDILLA:
-        case CS_AE:
         case CS_OE:
 
             return true;
@@ -93,78 +91,132 @@ void autoshift_press_user(uint16_t keycode, bool shifted, keyrecord_t *record) {
     switch(keycode) {
 
         case KC_BSPC:
-            register_code16((!shifted) ? KC_BSPC : KC_DEL);
+            if (shifted) {
+                tap_code16(KC_DEL);
+            } else {
+                tap_code16(KC_BSPC);
+            } break;
             break;
 
         case KC_LABK:
-            if (shifted) { send_unicode_string("<<"); }
-            else         { send_unicode_string("<"); } break;
-
+            if (shifted) {
+                tap_code16(KC_LABK);
+                tap_code16(KC_LABK);
+            } else {
+                tap_code16(KC_LABK);
+            } break;
         case KC_RABK:
-            if (shifted) { send_unicode_string(">>"); }
-            else         { send_unicode_string(">"); } break;
+            if (shifted) {
+                tap_code16(KC_RABK);
+                tap_code16(KC_RABK);
+            } else {
+                tap_code16(KC_RABK);
+            } break;
 
         /* French
            Release is not necessary with 'send_unicode_string()' */
-        case CS_E_ACUTE:
-            if (shifted) { send_unicode_string("É"); }
-            else         { send_unicode_string("é"); } break;
-
         case CS_A_GRAVE:
-            if (shifted) { send_unicode_string("À"); }
-            else         { send_unicode_string("à"); } break;
+            if (shifted) {
+                tap_code16(KC_GRAVE);
+                tap_code16(S(KC_A));
+            } else {
+                tap_code16(KC_GRAVE);
+                tap_code16(KC_A);
+            } break;
         case CS_E_GRAVE:
-            if (shifted) { send_unicode_string("È"); }
-            else         { send_unicode_string("è"); } break;
-        case CS_I_GRAVE:
-            if (shifted) { send_unicode_string("Ì"); }
-            else         { send_unicode_string("ì"); } break;
-        case CS_O_GRAVE:
-            if (shifted) { send_unicode_string("Ò"); }
-            else         { send_unicode_string("ò"); } break;
+            if (shifted) {
+                tap_code16(KC_GRAVE);
+                tap_code16(S(KC_E));
+            } else {
+                tap_code16(KC_GRAVE);
+                tap_code16(KC_E);
+            } break;
         case CS_U_GRAVE:
-            if (shifted) { send_unicode_string("Ù"); }
-            else         { send_unicode_string("ù"); } break;
+            if (shifted) {
+                tap_code16(KC_GRAVE);
+                tap_code16(S(KC_U));
+            } else {
+                tap_code16(KC_GRAVE);
+                tap_code16(KC_U);
+            } break;
 
         case CS_A_CIRCUMFLEX:
-            if (shifted) { send_unicode_string("Â"); }
-            else         { send_unicode_string("â"); }  break;
+            if (shifted) {
+                tap_code16(KC_CIRCUMFLEX);
+                tap_code16(S(KC_A));
+            } else {
+                tap_code16(KC_CIRCUMFLEX);
+                tap_code16(KC_A);
+            } break;
         case CS_E_CIRCUMFLEX:
-            if (shifted) { send_unicode_string("Ê"); }
-            else         { send_unicode_string("ê"); }  break;
+            if (shifted) {
+                tap_code16(KC_CIRCUMFLEX);
+                tap_code16(S(KC_E));
+            } else {
+                tap_code16(KC_CIRCUMFLEX);
+                tap_code16(KC_E);
+            } break;
         case CS_I_CIRCUMFLEX:
-            if (shifted) { send_unicode_string("Î"); }
-            else         { send_unicode_string("î"); }  break;
+            if (shifted) {
+                tap_code16(KC_CIRCUMFLEX);
+                tap_code16(S(KC_I));
+            } else {
+                tap_code16(KC_CIRCUMFLEX);
+                tap_code16(KC_I);
+            } break;
         case CS_O_CIRCUMFLEX:
-            if (shifted) { send_unicode_string("Ô"); }
-            else         { send_unicode_string("ô"); }  break;
+            if (shifted) {
+                tap_code16(KC_CIRCUMFLEX);
+                tap_code16(S(KC_O));
+            } else {
+                tap_code16(KC_CIRCUMFLEX);
+                tap_code16(KC_O);
+            } break;
         case CS_U_CIRCUMFLEX:
-            if (shifted) { send_unicode_string("Û"); }
-            else         { send_unicode_string("û"); }  break;
+            if (shifted) {
+                tap_code16(KC_CIRCUMFLEX);
+                tap_code16(S(KC_U));
+            } else {
+                tap_code16(KC_CIRCUMFLEX);
+                tap_code16(KC_U);
+            } break;
 
         case CS_E_DIAERESIS:
-            if (shifted) { send_unicode_string("Ë"); }
-            else         { send_unicode_string("ë"); }  break;
+            if (shifted) {
+                tap_code16(US_DIAE);
+                tap_code16(S(KC_E));
+            } else {
+                tap_code16(US_DIAE);
+                tap_code16(KC_E);
+            } break;
         case CS_I_DIAERESIS:
-            if (shifted) { send_unicode_string("Ï"); }
-            else         { send_unicode_string("ï"); }  break;
+            if (shifted) {
+                tap_code16(US_DIAE);
+                tap_code16(S(KC_I));
+            } else {
+                tap_code16(US_DIAE);
+                tap_code16(KC_I);
+            } break;
         case CS_U_DIAERESIS:
-            if (shifted) { send_unicode_string("Ü"); }
-            else         { send_unicode_string("ü"); }  break;
+            if (shifted) {
+                tap_code16(US_DIAE);
+                tap_code16(S(KC_U));
+            } else {
+                tap_code16(US_DIAE);
+                tap_code16(KC_U);
+            } break;
         case CS_Y_DIAERESIS:
-            if (shifted) { send_unicode_string("Ÿ"); }
-            else         { send_unicode_string("ÿ"); }  break;
+            if (shifted) {
+                tap_code16(US_DIAE);
+                tap_code16(S(KC_Y));
+            } else {
+                tap_code16(US_DIAE);
+                tap_code16(KC_Y);
+            } break;
 
-        case CS_C_CEDILLA:
-            if (shifted) { send_unicode_string("Ç"); }
-            else         { send_unicode_string("ç"); } break;
-        case CS_AE:
-            if (shifted) { send_unicode_string("Æ"); }
-            else         { send_unicode_string("æ"); } break;
         case CS_OE:
             if (shifted) { send_unicode_string("Œ"); }
             else         { send_unicode_string("œ"); } break;
-
 
         default:
             if (shifted) {
