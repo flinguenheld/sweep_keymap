@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #pragma once
-#include "keymap_us_international.h"
+#include "keymap_us_extended.h"
 
 enum layers {
     _BASE,
@@ -17,18 +17,10 @@ enum layers {
 enum custom_keys {
     UNICODE = SAFE_RANGE, // Shortcut to write unicodes, see numeric layer
 
-    CS_CIRCUMFLEX,
-    CS_GRAVE,
-    CS_QUOTE,
-    CS_QUOTE_DOUBLE,
-    CS_TILDE,
-
     /* See auto-shift */
     CS_A_GRAVE,
     CS_E_GRAVE,
     CS_U_GRAVE,
-
-    CS_OE,
 
     CS_A_CIRCUMFLEX,
     CS_E_CIRCUMFLEX,

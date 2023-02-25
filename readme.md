@@ -2,7 +2,7 @@
 
 
 This keymap is inspired by [optimot](https://bepo.fr/) which is a French layout.  
-Nonetheless it uses the US international keymap, except for "Œ" which is sent in unicode.
+Nonetheless it uses the US international extended keymap for French keys.  
 
 It uses the *best* qmk features :
 - combos ♥
@@ -31,6 +31,15 @@ and :
 
     Click twice on the flash button and use nautilus for instance to clic on the keyboard.  
     Don't forget to flash with the double tap bootloader define before soldering.
+
+#### Layout
+
+Set the us international to activate French keys :
+
+    /usr/share/X11/xkb/symbols/
+    localectl list-x11-keymap-variants us
+
+    setxkbmap us altgr-intl
 
 #### Links
 

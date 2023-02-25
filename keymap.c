@@ -16,7 +16,6 @@
 
 #include QMK_KEYBOARD_H
 #include "keycodes.h"
-#include "keymap_us_international.h"
 
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
@@ -27,33 +26,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case UNICODE:
             if (record->event.pressed) {
                 tap_code16(C(S(KC_U)));
-            } break;
-
-        // Add a space to dead keys
-        case CS_CIRCUMFLEX:
-            if (record->event.pressed) {
-                tap_code16(KC_CIRCUMFLEX);
-                tap_code16(KC_SPACE);
-            } break;
-        case CS_GRAVE:
-            if (record->event.pressed) {
-                tap_code16(KC_GRAVE);
-                tap_code16(KC_SPACE);
-            } break;
-        case CS_QUOTE:
-            if (record->event.pressed) {
-                tap_code16(KC_QUOTE);
-                tap_code16(KC_SPACE);
-            } break;
-        case CS_QUOTE_DOUBLE:
-            if (record->event.pressed) {
-                tap_code16(KC_DOUBLE_QUOTE);
-                tap_code16(KC_SPACE);
-            } break;
-        case CS_TILDE:
-            if (record->event.pressed) {
-                tap_code16(KC_TILD);
-                tap_code16(KC_SPACE);
             } break;
     }
 

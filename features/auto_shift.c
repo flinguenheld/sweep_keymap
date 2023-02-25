@@ -16,6 +16,7 @@ bool get_auto_shifted_key(uint16_t keycode, keyrecord_t *record) {
         case US_EACU:
         case US_CCED:
         case US_AE:
+        case US_OE:
 
         // --
         case KC_A:
@@ -77,9 +78,6 @@ bool get_custom_auto_shifted_key(uint16_t keycode, keyrecord_t *record) {
         case CS_I_DIAERESIS:
         case CS_U_DIAERESIS:
         case CS_Y_DIAERESIS:
-
-        case CS_OE:
-
             return true;
 
         default:
@@ -117,67 +115,67 @@ void autoshift_press_user(uint16_t keycode, bool shifted, keyrecord_t *record) {
            Release is not necessary with 'send_unicode_string()' */
         case CS_A_GRAVE:
             if (shifted) {
-                tap_code16(KC_GRAVE);
+                tap_code16(US_DGRV);
                 tap_code16(S(KC_A));
             } else {
-                tap_code16(KC_GRAVE);
+                tap_code16(US_DGRV);
                 tap_code16(KC_A);
             } break;
         case CS_E_GRAVE:
             if (shifted) {
-                tap_code16(KC_GRAVE);
+                tap_code16(US_DGRV);
                 tap_code16(S(KC_E));
             } else {
-                tap_code16(KC_GRAVE);
+                tap_code16(US_DGRV);
                 tap_code16(KC_E);
             } break;
         case CS_U_GRAVE:
             if (shifted) {
-                tap_code16(KC_GRAVE);
+                tap_code16(US_DGRV);
                 tap_code16(S(KC_U));
             } else {
-                tap_code16(KC_GRAVE);
+                tap_code16(US_DGRV);
                 tap_code16(KC_U);
             } break;
 
         case CS_A_CIRCUMFLEX:
             if (shifted) {
-                tap_code16(KC_CIRCUMFLEX);
+                tap_code16(US_DCIR);
                 tap_code16(S(KC_A));
             } else {
-                tap_code16(KC_CIRCUMFLEX);
+                tap_code16(US_DCIR);
                 tap_code16(KC_A);
             } break;
         case CS_E_CIRCUMFLEX:
             if (shifted) {
-                tap_code16(KC_CIRCUMFLEX);
+                tap_code16(US_DCIR);
                 tap_code16(S(KC_E));
             } else {
-                tap_code16(KC_CIRCUMFLEX);
+                tap_code16(US_DCIR);
                 tap_code16(KC_E);
             } break;
         case CS_I_CIRCUMFLEX:
             if (shifted) {
-                tap_code16(KC_CIRCUMFLEX);
+                tap_code16(US_DCIR);
                 tap_code16(S(KC_I));
             } else {
-                tap_code16(KC_CIRCUMFLEX);
+                tap_code16(US_DCIR);
                 tap_code16(KC_I);
             } break;
         case CS_O_CIRCUMFLEX:
             if (shifted) {
-                tap_code16(KC_CIRCUMFLEX);
+                tap_code16(US_DCIR);
                 tap_code16(S(KC_O));
             } else {
-                tap_code16(KC_CIRCUMFLEX);
+                tap_code16(US_DCIR);
                 tap_code16(KC_O);
             } break;
         case CS_U_CIRCUMFLEX:
             if (shifted) {
-                tap_code16(KC_CIRCUMFLEX);
+                tap_code16(US_DCIR);
                 tap_code16(S(KC_U));
             } else {
-                tap_code16(KC_CIRCUMFLEX);
+                tap_code16(US_DCIR);
                 tap_code16(KC_U);
             } break;
 
@@ -213,10 +211,6 @@ void autoshift_press_user(uint16_t keycode, bool shifted, keyrecord_t *record) {
                 tap_code16(US_DIAE);
                 tap_code16(KC_Y);
             } break;
-
-        case CS_OE:
-            if (shifted) { send_unicode_string("Œ"); }
-            else         { send_unicode_string("œ"); } break;
 
         default:
             if (shifted) {
