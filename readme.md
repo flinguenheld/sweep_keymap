@@ -34,7 +34,7 @@ and :
 
 #### Layout
 
-Set the us international to activate French keys :
+Set the us altgr international to activate French keys :
 
     /usr/share/X11/xkb/symbols/
     localectl list-x11-keymap-variants us
