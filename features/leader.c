@@ -27,17 +27,28 @@ void matrix_scan_user(void) {
 
     SEQ_ONE_KEY(KC_C) {
       SEND_STRING(" | xclip -r -selection clipboard"); }
+
+    /* Keyring requests, improbable combinaisons used by i3 */
     SEQ_THREE_KEYS(KC_G, KC_I, KC_T) {
         register_code(KC_LEFT_GUI);
         register_code(KC_LEFT_SHIFT);
         register_code(KC_LEFT_CTRL);
-        register_code(KC_G);
-        unregister_code(KC_G);
+        register_code(KC_0);
+        unregister_code(KC_0);
         unregister_code(KC_LEFT_GUI);
         unregister_code(KC_LEFT_SHIFT);
         unregister_code(KC_LEFT_CTRL);
     };
-
+    SEQ_THREE_KEYS(KC_M, KC_A, KC_I){
+        register_code(KC_LEFT_GUI);
+        register_code(KC_LEFT_SHIFT);
+        register_code(KC_LEFT_CTRL);
+        register_code(KC_1);
+        unregister_code(KC_1);
+        unregister_code(KC_LEFT_GUI);
+        unregister_code(KC_LEFT_SHIFT);
+        unregister_code(KC_LEFT_CTRL);
+    };
     /* ----- */
     SEQ_THREE_KEYS(KC_D, KC_E, KC_G) {
       tap_code16(US_DEG); } // °
