@@ -20,6 +20,10 @@ void matrix_scan_user(void) {
     SEQ_TWO_KEYS(KC_F, KC_L) {
       SEND_STRING("FLinguenheld"); }
 
+    SEQ_THREE_KEYS(KC_D, KC_O, KC_T) {
+      SEND_STRING("https://github.com/FLinguenheld/dotfiles"); }
+
+
     SEQ_THREE_KEYS(KC_T, KC_E, KC_S) {
       SEND_STRING("test01234"); }
     SEQ_THREE_KEYS(KC_A, KC_D, KC_M) {
@@ -45,6 +49,16 @@ void matrix_scan_user(void) {
         register_code(KC_LEFT_CTRL);
         register_code(KC_1);
         unregister_code(KC_1);
+        unregister_code(KC_LEFT_GUI);
+        unregister_code(KC_LEFT_SHIFT);
+        unregister_code(KC_LEFT_CTRL);
+    };
+    SEQ_THREE_KEYS(KC_P, KC_A, KC_S){
+        register_code(KC_LEFT_GUI);
+        register_code(KC_LEFT_SHIFT);
+        register_code(KC_LEFT_CTRL);
+        register_code(KC_2);
+        unregister_code(KC_2);
         unregister_code(KC_LEFT_GUI);
         unregister_code(KC_LEFT_SHIFT);
         unregister_code(KC_LEFT_CTRL);
