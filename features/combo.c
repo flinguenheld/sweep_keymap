@@ -76,18 +76,10 @@ enum combos {
     PARENTHESIS_LEFT,
     PARENTHESIS_RIGHT,
 
-    /* -- */
-    ALT_SHIFT,
-    CONTROL_SHIFT,
-    CONTROL_ALT,
-    CONTROL_SHIFT_ALT,
-    RIGHT_ALT,
-
     /* One hand special */
     CONTROL_RIGHT,
     CONTROL_SHIFT_RIGHT,
 
-    // DEL_LEFT,
     ALT_LEFT,
     SHIFT_LEFT,
     CONTROL_SHIFT_LEFT,
@@ -102,26 +94,18 @@ uint16_t COMBO_LEN = COMBO_LENGTH;
 const uint16_t PROGMEM combo_leader[] =                 {LT(_MOUSE, KC_COMM), LT(_ARROWS, KC_DOT), COMBO_END};
 const uint16_t PROGMEM combo_bootloader[] =             {KC_K, KC_TAB, KC_Z, KC_BSPC, KC_V, KC_J, COMBO_END};
 
-const uint16_t PROGMEM combo_adjust[] =                 {KC_LCPO, LT(_NUMERIC, KC_ENT), COMBO_END};
+const uint16_t PROGMEM combo_adjust[] =                 {CTL_T(KC_SPACE), LT(_NUMERIC, KC_ENT), COMBO_END};
 const uint16_t PROGMEM combo_fn[] =                     {LT(_NUMERIC, KC_ENT), KC_N, COMBO_END};
 const uint16_t PROGMEM combo_left_hand[] =              {LT(_MOUSE, KC_COMM), GUI_T(KC_ESC), COMBO_END};
-
-/* -- */
-// const uint16_t PROGMEM combo_enter_shifted[] =          {LT(_NUMERIC, KC_ENT), KC_S, COMBO_END};
-const uint16_t PROGMEM combo_control_shift[] =          {KC_LCPO, KC_S, COMBO_END};
-const uint16_t PROGMEM combo_control_alt[] =            {KC_LCPO, KC_LALT, COMBO_END};
-const uint16_t PROGMEM combo_control_shift_alt[] =      {KC_LCPO, KC_S, KC_A, COMBO_END};
-const uint16_t PROGMEM combo_right_alt[] =              {KC_LAPO, KC_G, COMBO_END};
-const uint16_t PROGMEM combo_alt_shift[] =              {KC_LALT, KC_S, COMBO_END};
 
 /* -- */
 const uint16_t PROGMEM combo_c_cedilla[] =              {LT(_ARROWS, KC_DOT), KC_C, COMBO_END};
 const uint16_t PROGMEM combo_ea[] =                     {US_EACU, KC_A, COMBO_END};
 const uint16_t PROGMEM combo_eo[] =                     {US_EACU, KC_O, COMBO_END};
 
-const uint16_t PROGMEM combo_a_grave[] =                {KC_LCPO, KC_A, COMBO_END};
-const uint16_t PROGMEM combo_e_grave[] =                {KC_LCPO, KC_E, COMBO_END};
-const uint16_t PROGMEM combo_u_grave[] =                {KC_LCPO, KC_U, COMBO_END};
+const uint16_t PROGMEM combo_a_grave[] =                {CTL_T(KC_SPACE), KC_A, COMBO_END};
+const uint16_t PROGMEM combo_e_grave[] =                {CTL_T(KC_SPACE), KC_E, COMBO_END};
+const uint16_t PROGMEM combo_u_grave[] =                {CTL_T(KC_SPACE), KC_U, COMBO_END};
 
 const uint16_t PROGMEM combo_a_circumflex[] =           {LT(_MOUSE, KC_COMM), KC_A, COMBO_END};
 const uint16_t PROGMEM combo_e_circumflex[] =           {LT(_MOUSE, KC_COMM), KC_E, COMBO_END};
@@ -173,26 +157,18 @@ const uint16_t PROGMEM combo_control_right[] =          {LT(_NUMERIC, KC_ENT), K
 const uint16_t PROGMEM combo_control_shift_right[] =    {LT(_NUMERIC, KC_ENT), KC_S, COMBO_END};
 
 const uint16_t PROGMEM combo_shift_left[] =             {LT(_MOUSE, KC_COMM), US_EACU, COMBO_END};
-const uint16_t PROGMEM combo_alt_left[] =               {KC_LCPO, US_EACU, COMBO_END};
-const uint16_t PROGMEM combo_control_shift_left[] =     {KC_LCPO, GUI_T(KC_ESC), COMBO_END};
+const uint16_t PROGMEM combo_alt_left[] =               {CTL_T(KC_SPACE), US_EACU, COMBO_END};
+const uint16_t PROGMEM combo_control_shift_left[] =     {CTL_T(KC_SPACE), GUI_T(KC_ESC), COMBO_END};
 
 
 /* Sequences fo keys */
 combo_t key_combos[] = {
-    [LEADER] = COMBO(combo_leader,                          KC_LEAD),
+    [LEADER] = COMBO(combo_leader,                          QK_LEAD),
     [BOOTLOADER] = COMBO(combo_bootloader,                  QK_BOOTLOADER),
 
     [LAYER_ADJUST] = COMBO(combo_adjust,                    OSL(_ADJUST)),
     [LAYER_FN] = COMBO(combo_fn,                            OSL(_FN)),
     [LAYER_LEFT_HAND] = COMBO(combo_left_hand,              OSL(_LEFT_HAND)),
-
-    /* -- */
-    // [ENTER_SHIFTED] = COMBO(combo_enter_shifted,            S(KC_ENT)),
-    [ALT_SHIFT] = COMBO(combo_alt_shift,                    A(S(XXXXXXX))),
-    [CONTROL_SHIFT] = COMBO(combo_control_shift,            C(S(XXXXXXX))),
-    [CONTROL_ALT] = COMBO(combo_control_alt,                C(A(XXXXXXX))),
-    [CONTROL_SHIFT_ALT] = COMBO(combo_control_shift_alt,    C(S(A(XXXXXXX)))),
-    [RIGHT_ALT] = COMBO(combo_right_alt,                    KC_RALT),
 
     /* French */
     [C_CEDILLA] = COMBO(combo_c_cedilla,                    US_CCED),
@@ -252,7 +228,7 @@ combo_t key_combos[] = {
     [CONTROL_RIGHT] = COMBO(combo_control_right,                KC_RCTL),
     [CONTROL_SHIFT_RIGHT] = COMBO(combo_control_shift_right,    C(S(XXXXXXX))),
 
-    [SHIFT_LEFT] = COMBO(combo_shift_left,                      KC_LSFT),
     [ALT_LEFT] = COMBO(combo_alt_left,                          KC_LALT),
+    [SHIFT_LEFT] = COMBO(combo_shift_left,                      KC_LSFT),
     [CONTROL_SHIFT_LEFT] = COMBO(combo_control_shift_left,      C(S(XXXXXXX))),
 };

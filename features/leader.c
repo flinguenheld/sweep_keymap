@@ -6,34 +6,28 @@
 #include "keycodes.h"
 
 
-LEADER_EXTERNS();
+void leader_end_user(void) {
 
-void matrix_scan_user(void) {
-  LEADER_DICTIONARY() {
-    leading = false;
-    leader_end();
+    if (leader_sequence_two_keys(KC_M, KC_S)) {
+      SEND_STRING("f@linguenheld.fr");
+    } else if (leader_sequence_two_keys(KC_M, KC_L)) {
+      SEND_STRING("florent@linguenheld.fr");
+    } else if (leader_sequence_two_keys(KC_F, KC_L)) {
+      SEND_STRING("FLinguenheld");
 
-    SEQ_TWO_KEYS(KC_M, KC_S) {
-      SEND_STRING("f@linguenheld.fr"); }
-    SEQ_TWO_KEYS(KC_M, KC_L) {
-      SEND_STRING("florent@linguenheld.fr"); }
-    SEQ_TWO_KEYS(KC_F, KC_L) {
-      SEND_STRING("FLinguenheld"); }
+    } else if (leader_sequence_three_keys(KC_D, KC_O, KC_T)) {
+      SEND_STRING("https://github.com/FLinguenheld/dotfiles");
 
-    SEQ_THREE_KEYS(KC_D, KC_O, KC_T) {
-      SEND_STRING("https://github.com/FLinguenheld/dotfiles"); }
+    } else if (leader_sequence_three_keys(KC_T, KC_E, KC_S)) {
+      SEND_STRING("test01234");
+    } else if (leader_sequence_three_keys(KC_A, KC_D, KC_M)) {
+      SEND_STRING("admin01234");
 
-
-    SEQ_THREE_KEYS(KC_T, KC_E, KC_S) {
-      SEND_STRING("test01234"); }
-    SEQ_THREE_KEYS(KC_A, KC_D, KC_M) {
-      SEND_STRING("admin01234"); }
-
-    SEQ_ONE_KEY(KC_C) {
-      SEND_STRING(" | xclip -r -selection clipboard"); }
+    } else if (leader_sequence_one_key(KC_C)) {
+      SEND_STRING(" | xclip -r -selection clipboard");
 
     /* Keyring requests, improbable combinaisons used by i3 */
-    SEQ_THREE_KEYS(KC_G, KC_I, KC_T) {
+    } else if (leader_sequence_three_keys(KC_G, KC_I, KC_T)) {
         register_code(KC_LEFT_GUI);
         register_code(KC_LEFT_SHIFT);
         register_code(KC_LEFT_CTRL);
@@ -42,8 +36,8 @@ void matrix_scan_user(void) {
         unregister_code(KC_LEFT_GUI);
         unregister_code(KC_LEFT_SHIFT);
         unregister_code(KC_LEFT_CTRL);
-    };
-    SEQ_THREE_KEYS(KC_M, KC_A, KC_I){
+
+    } else if (leader_sequence_three_keys(KC_M, KC_A, KC_I)) {
         register_code(KC_LEFT_GUI);
         register_code(KC_LEFT_SHIFT);
         register_code(KC_LEFT_CTRL);
@@ -52,8 +46,8 @@ void matrix_scan_user(void) {
         unregister_code(KC_LEFT_GUI);
         unregister_code(KC_LEFT_SHIFT);
         unregister_code(KC_LEFT_CTRL);
-    };
-    SEQ_THREE_KEYS(KC_P, KC_A, KC_S){
+
+    } else if (leader_sequence_three_keys(KC_P, KC_A, KC_S)) {
         register_code(KC_LEFT_GUI);
         register_code(KC_LEFT_SHIFT);
         register_code(KC_LEFT_CTRL);
@@ -62,237 +56,237 @@ void matrix_scan_user(void) {
         unregister_code(KC_LEFT_GUI);
         unregister_code(KC_LEFT_SHIFT);
         unregister_code(KC_LEFT_CTRL);
-    };
+
     /* ----- */
-    SEQ_THREE_KEYS(KC_D, KC_E, KC_G) {
-      tap_code16(US_DEG); } // °
-    SEQ_THREE_KEYS(KC_D, KC_I, KC_A) {
-      tap_code16(US_OSTR); } // ø
-    SEQ_THREE_KEYS(KC_S, KC_E, KC_C) {
-      tap_code16(US_SECT); } // §
+    } else if (leader_sequence_three_keys(KC_D, KC_E, KC_G)) {
+      tap_code16(US_DEG); // °
+    } else if (leader_sequence_three_keys(KC_D, KC_I, KC_A)) {
+      tap_code16(US_OSTR); // ø
+    } else if (leader_sequence_three_keys(KC_S, KC_E, KC_C)) {
+      tap_code16(US_SECT); // §
 
     /* Copyright / Register */
-    SEQ_THREE_KEYS(KC_C, KC_O, KC_P) {
-      tap_code16(US_COPY); }
-    SEQ_THREE_KEYS(KC_R, KC_E, KC_G) {
-      tap_code16(US_REGD); }
+    } else if (leader_sequence_three_keys(KC_C, KC_O, KC_P)) {
+      tap_code16(US_COPY);
+    } else if (leader_sequence_three_keys(KC_R, KC_E, KC_G)) {
+      tap_code16(US_REGD);
 
     /* Currency */
-    SEQ_THREE_KEYS(KC_E, KC_U, KC_R) {
-      tap_code16(US_EURO); }
-    SEQ_THREE_KEYS(KC_P, KC_O, KC_U) {
-      tap_code16(US_PND); }
-    SEQ_THREE_KEYS(KC_Y, KC_E, KC_N) {
-      tap_code16(US_YEN); }
-    SEQ_THREE_KEYS(KC_C, KC_E, KC_N) {
-      tap_code16(US_CENT); }
+    } else if (leader_sequence_three_keys(KC_E, KC_U, KC_R)) {
+      tap_code16(US_EURO);
+    } else if (leader_sequence_three_keys(KC_P, KC_O, KC_U)) {
+      tap_code16(US_PND);
+    } else if (leader_sequence_three_keys(KC_Y, KC_E, KC_N)) {
+      tap_code16(US_YEN);
+    } else if (leader_sequence_three_keys(KC_C, KC_E, KC_N)) {
+      tap_code16(US_CENT);
 
     /* Fractions */
-    SEQ_THREE_KEYS(KC_F, KC_C, KC_T) {
-      tap_code16(US_QRTR); } // ¼
-    SEQ_THREE_KEYS(KC_F, KC_C, KC_G) {
-      tap_code16(US_HALF); } // ½
-    SEQ_THREE_KEYS(KC_F, KC_H, KC_T) {
-      tap_code16(US_TQTR); } // ¾
+    } else if (leader_sequence_three_keys(KC_F, KC_C, KC_T)) {
+      tap_code16(US_QRTR); // ¼
+    } else if (leader_sequence_three_keys(KC_F, KC_C, KC_G)) {
+      tap_code16(US_HALF); // ½
+    } else if (leader_sequence_three_keys(KC_F, KC_H, KC_T)) {
+      tap_code16(US_TQTR); // ¾
 
     /* Maths */
-    SEQ_THREE_KEYS(KC_M, KC_U, KC_L) {
-      tap_code16(US_MUL); } // ×
-    SEQ_THREE_KEYS(KC_D, KC_I, KC_V) {
-      tap_code16(US_DIV); } // ÷
-    SEQ_TWO_KEYS(KC_P, KC_M) {
-      send_unicode_string("±"); }
-    SEQ_THREE_KEYS(KC_I, KC_N, KC_E) {
-      send_unicode_string("≠"); }
-    SEQ_THREE_KEYS(KC_A, KC_L, KC_M) {
-      send_unicode_string("≈"); }
-    SEQ_THREE_KEYS(KC_S, KC_Q, KC_U) {
-      send_unicode_string("√"); }
-    SEQ_THREE_KEYS(KC_I, KC_N, KC_F) {
-      send_unicode_string("∞"); }
-    SEQ_TWO_KEYS(KC_LABK, KC_LABK) {
-      send_unicode_string("≤"); }
-    SEQ_TWO_KEYS(KC_RABK, KC_RABK) {
-      send_unicode_string("≥"); }
+    } else if (leader_sequence_three_keys(KC_M, KC_U, KC_L)) {
+      tap_code16(US_MUL); // ×
+    } else if (leader_sequence_three_keys(KC_D, KC_I, KC_V)) {
+      tap_code16(US_DIV); // ÷
+    } else if (leader_sequence_two_keys(KC_P, KC_M)) {
+      send_unicode_string("±");
+    } else if (leader_sequence_three_keys(KC_I, KC_N, KC_E)) {
+      send_unicode_string("≠");
+    } else if (leader_sequence_three_keys(KC_A, KC_L, KC_M)) {
+      send_unicode_string("≈");
+    } else if (leader_sequence_three_keys(KC_S, KC_Q, KC_U)) {
+      send_unicode_string("√");
+    } else if (leader_sequence_three_keys(KC_I, KC_N, KC_F)) {
+      send_unicode_string("∞");
+    } else if (leader_sequence_two_keys(KC_LABK, KC_LABK)) {
+      send_unicode_string("≤");
+    } else if (leader_sequence_two_keys(KC_RABK, KC_RABK)) {
+      send_unicode_string("≥");
 
     /* Greek */
-    SEQ_TWO_KEYS(KC_P, KC_I) {
-      send_unicode_string("π"); }
-    SEQ_THREE_KEYS(KC_P, KC_I, KC_I) {
-      send_unicode_string("Π"); }
+    } else if (leader_sequence_two_keys(KC_P, KC_I)) {
+      send_unicode_string("π");
+    } else if (leader_sequence_three_keys(KC_P, KC_I, KC_I)) {
+      send_unicode_string("Π");
 
-    SEQ_THREE_KEYS(KC_O, KC_M, KC_E) {
-      send_unicode_string("ω"); }
-    SEQ_FOUR_KEYS(KC_O, KC_M, KC_E, KC_G) {
-      send_unicode_string("Ω"); }
+    } else if (leader_sequence_three_keys(KC_O, KC_M, KC_E)) {
+      send_unicode_string("ω");
+    } else if (leader_sequence_four_keys(KC_O, KC_M, KC_E, KC_G)) {
+      send_unicode_string("Ω");
 
     /* Icons */
-    SEQ_THREE_KEYS(KC_F, KC_L, KC_A) {
-      send_unicode_string("⚡"); }
-    SEQ_THREE_KEYS(KC_S, KC_T, KC_A) {
-      send_unicode_string("⭐"); }
-    SEQ_THREE_KEYS(KC_S, KC_P, KC_A) {
-      send_unicode_string("✨"); }
-    SEQ_THREE_KEYS(KC_P, KC_O, KC_P) {
-      send_unicode_string("🎉"); }
-    SEQ_THREE_KEYS(KC_R, KC_E, KC_C) {
-      send_unicode_string("♻️"); }
-    SEQ_THREE_KEYS(KC_L, KC_O, KC_V) {
-      send_unicode_string("❤️"); }
-    SEQ_THREE_KEYS(KC_F, KC_I, KC_R) {
-      send_unicode_string("🔥"); }
-    SEQ_THREE_KEYS(KC_B, KC_O, KC_M) {
-      send_unicode_string("💣"); }
-    SEQ_FOUR_KEYS(KC_B, KC_O, KC_U, KC_M) {
-      send_unicode_string("💥"); }
-    SEQ_THREE_KEYS(KC_R, KC_O, KC_C) {
-      send_unicode_string("🚀"); }
-    SEQ_THREE_KEYS(KC_T, KC_E, KC_L) {
-      send_unicode_string("🔭"); }
-    SEQ_THREE_KEYS(KC_M, KC_A, KC_G) {
-      send_unicode_string("🔎"); }
-    SEQ_THREE_KEYS(KC_W, KC_A, KC_R) {
-      send_unicode_string("⚠️"); }
+    } else if (leader_sequence_three_keys(KC_F, KC_L, KC_A)) {
+      send_unicode_string("⚡");
+    } else if (leader_sequence_three_keys(KC_S, KC_T, KC_A)) {
+      send_unicode_string("⭐");
+    } else if (leader_sequence_three_keys(KC_S, KC_P, KC_A)) {
+      send_unicode_string("✨");
+    } else if (leader_sequence_three_keys(KC_P, KC_O, KC_P)) {
+      send_unicode_string("🎉");
+    } else if (leader_sequence_three_keys(KC_R, KC_E, KC_C)) {
+      send_unicode_string("♻️");
+    } else if (leader_sequence_three_keys(KC_L, KC_O, KC_V)) {
+      send_unicode_string("❤️");
+    } else if (leader_sequence_three_keys(KC_F, KC_I, KC_R)) {
+      send_unicode_string("🔥");
+    } else if (leader_sequence_three_keys(KC_B, KC_O, KC_M)) {
+      send_unicode_string("💣");
+    } else if (leader_sequence_four_keys(KC_B, KC_O, KC_U, KC_M)) {
+      send_unicode_string("💥");
+    } else if (leader_sequence_three_keys(KC_R, KC_O, KC_C)) {
+      send_unicode_string("🚀");
+    } else if (leader_sequence_three_keys(KC_T, KC_E, KC_L)) {
+      send_unicode_string("🔭");
+    } else if (leader_sequence_three_keys(KC_M, KC_A, KC_G)) {
+      send_unicode_string("🔎");
+    } else if (leader_sequence_three_keys(KC_W, KC_A, KC_R)) {
+      send_unicode_string("⚠️");
 
-    SEQ_THREE_KEYS(KC_B, KC_U, KC_L) {
-      send_unicode_string("💡"); }
-    SEQ_FOUR_KEYS(KC_I, KC_N, KC_F, KC_O) {
-      send_unicode_string("ℹ️"); }
-    SEQ_THREE_KEYS(KC_G, KC_E, KC_A) {
-      send_unicode_string("⚙️"); }
-    SEQ_THREE_KEYS(KC_L, KC_I, KC_N) {
-      send_unicode_string("🔗"); }
-    SEQ_THREE_KEYS(KC_P, KC_I, KC_N) {
-      send_unicode_string("📌"); }
-    SEQ_FOUR_KEYS(KC_F, KC_L, KC_A, KC_G) {
-      send_unicode_string("🚩"); }
-    SEQ_THREE_KEYS(KC_B, KC_A, KC_L) {
-      send_unicode_string("🎈"); }
-    SEQ_THREE_KEYS(KC_G, KC_I, KC_F) {
-      send_unicode_string("🎁"); }
+    } else if (leader_sequence_three_keys(KC_B, KC_U, KC_L)) {
+      send_unicode_string("💡");
+    } else if (leader_sequence_four_keys(KC_I, KC_N, KC_F, KC_O)) {
+      send_unicode_string("ℹ️");
+    } else if (leader_sequence_three_keys(KC_G, KC_E, KC_A)) {
+      send_unicode_string("⚙️");
+    } else if (leader_sequence_three_keys(KC_L, KC_I, KC_N)) {
+      send_unicode_string("🔗");
+    } else if (leader_sequence_three_keys(KC_P, KC_I, KC_N)) {
+      send_unicode_string("📌");
+    } else if (leader_sequence_four_keys(KC_F, KC_L, KC_A, KC_G)) {
+      send_unicode_string("🚩");
+    } else if (leader_sequence_three_keys(KC_B, KC_A, KC_L)) {
+      send_unicode_string("🎈");
+    } else if (leader_sequence_three_keys(KC_G, KC_I, KC_F)) {
+      send_unicode_string("🎁");
 
-    SEQ_THREE_KEYS(KC_P, KC_E, KC_N) {
-      send_unicode_string("✏️"); }
-    SEQ_THREE_KEYS(KC_K, KC_E, KC_Y) {
-      send_unicode_string("🔑"); }
-    SEQ_THREE_KEYS(KC_B, KC_O, KC_X) {
-      send_unicode_string("🧰"); }
+    } else if (leader_sequence_three_keys(KC_P, KC_E, KC_N)) {
+      send_unicode_string("✏️");
+    } else if (leader_sequence_three_keys(KC_K, KC_E, KC_Y)) {
+      send_unicode_string("🔑");
+    } else if (leader_sequence_three_keys(KC_B, KC_O, KC_X)) {
+      send_unicode_string("🧰");
 
-    SEQ_TWO_KEYS(KC_O, KC_K) {
-      send_unicode_string("👌"); }
-    SEQ_THREE_KEYS(KC_O, KC_W, KC_D) {
-      send_unicode_string("⛔"); }
+    } else if (leader_sequence_two_keys(KC_O, KC_K)) {
+      send_unicode_string("👌");
+    } else if (leader_sequence_three_keys(KC_O, KC_W, KC_D)) {
+      send_unicode_string("⛔");
 
-    SEQ_ONE_KEY(KC_V) {
-      send_unicode_string("✓"); }
-    SEQ_TWO_KEYS(KC_V, KC_B) {
-      send_unicode_string("☑"); }
-    SEQ_TWO_KEYS(KC_V, KC_G) {
-      send_unicode_string("✅"); }
+    } else if (leader_sequence_one_key(KC_V)) {
+      send_unicode_string("✓");
+    } else if (leader_sequence_two_keys(KC_V, KC_B)) {
+      send_unicode_string("☑");
+    } else if (leader_sequence_two_keys(KC_V, KC_G)) {
+      send_unicode_string("✅");
 
-    SEQ_ONE_KEY(KC_X) {
-      send_unicode_string("✗"); }
-    SEQ_TWO_KEYS(KC_X, KC_B) {
-      send_unicode_string("☒"); }
-    SEQ_TWO_KEYS(KC_X, KC_G) {
-      send_unicode_string("❎"); }
-    SEQ_TWO_KEYS(KC_X, KC_R) {
-      send_unicode_string("❌"); }
+    } else if (leader_sequence_one_key(KC_X)) {
+      send_unicode_string("✗");
+    } else if (leader_sequence_two_keys(KC_X, KC_B)) {
+      send_unicode_string("☒");
+    } else if (leader_sequence_two_keys(KC_X, KC_G)) {
+      send_unicode_string("❎");
+    } else if (leader_sequence_two_keys(KC_X, KC_R)) {
+      send_unicode_string("❌");
 
-    SEQ_ONE_KEY(KC_QUESTION) {
-      send_unicode_string("❔"); }
-    SEQ_ONE_KEY(KC_EXCLAIM) {
-      send_unicode_string("❕"); }
-    SEQ_TWO_KEYS(KC_QUESTION, KC_QUESTION) {
-      send_unicode_string("❓"); }
-    SEQ_TWO_KEYS(KC_EXCLAIM, KC_EXCLAIM) {
-      send_unicode_string("❗"); }
+    } else if (leader_sequence_one_key(KC_QUESTION)) {
+      send_unicode_string("❔");
+    } else if (leader_sequence_one_key(KC_EXCLAIM)) {
+      send_unicode_string("❕");
+    } else if (leader_sequence_two_keys(KC_QUESTION, KC_QUESTION)) {
+      send_unicode_string("❓");
+    } else if (leader_sequence_two_keys(KC_EXCLAIM, KC_EXCLAIM)) {
+      send_unicode_string("❗");
 
-    SEQ_THREE_KEYS(KC_C, KC_O, KC_F) {
-      send_unicode_string("☕"); }
-    SEQ_THREE_KEYS(KC_U, KC_M, KC_B) {
-      send_unicode_string("☔"); }
+    } else if (leader_sequence_three_keys(KC_C, KC_O, KC_F)) {
+      send_unicode_string("☕");
+    } else if (leader_sequence_three_keys(KC_U, KC_M, KC_B)) {
+      send_unicode_string("☔");
 
-    SEQ_THREE_KEYS(KC_L, KC_O, KC_L) {
-      send_unicode_string("😀"); }
-    SEQ_THREE_KEYS(KC_M, KC_D, KC_R) {
-      send_unicode_string("🤣"); }
-    SEQ_THREE_KEYS(KC_K, KC_I, KC_S) {
-      send_unicode_string("😙"); }
-    SEQ_THREE_KEYS(KC_A, KC_N, KC_G) {
-      send_unicode_string("😇"); }
-    SEQ_THREE_KEYS(KC_G, KC_L, KC_A) {
-      send_unicode_string("😎"); }
-    SEQ_THREE_KEYS(KC_A, KC_N, KC_G) {
-      send_unicode_string("🤬"); }
-    SEQ_THREE_KEYS(KC_F, KC_E, KC_A) {
-      send_unicode_string("😱"); }
-    SEQ_THREE_KEYS(KC_N, KC_E, KC_U) {
-      send_unicode_string("😐"); }
-    SEQ_THREE_KEYS(KC_T, KC_H, KC_I) {
-      send_unicode_string("🤔"); }
-    SEQ_THREE_KEYS(KC_Z, KC_I, KC_P) {
-      send_unicode_string("🤐"); }
-    SEQ_THREE_KEYS(KC_S, KC_U, KC_R) {
-      send_unicode_string("😯"); }
-    SEQ_THREE_KEYS(KC_R, KC_O, KC_L) {
-      send_unicode_string("🙄"); }
-    SEQ_THREE_KEYS(KC_M, KC_O, KC_O) {
-      send_unicode_string("🌝"); }
-    SEQ_THREE_KEYS(KC_H, KC_U, KC_G) {
-      send_unicode_string("🫂"); }
+    } else if (leader_sequence_three_keys(KC_L, KC_O, KC_L)) {
+      send_unicode_string("😀");
+    } else if (leader_sequence_three_keys(KC_M, KC_D, KC_R)) {
+      send_unicode_string("🤣");
+    } else if (leader_sequence_three_keys(KC_K, KC_I, KC_S)) {
+      send_unicode_string("😙");
+    } else if (leader_sequence_three_keys(KC_A, KC_N, KC_G)) {
+      send_unicode_string("😇");
+    } else if (leader_sequence_three_keys(KC_G, KC_L, KC_A)) {
+      send_unicode_string("😎");
+    } else if (leader_sequence_three_keys(KC_A, KC_N, KC_G)) {
+      send_unicode_string("🤬");
+    } else if (leader_sequence_three_keys(KC_F, KC_E, KC_A)) {
+      send_unicode_string("😱");
+    } else if (leader_sequence_three_keys(KC_N, KC_E, KC_U)) {
+      send_unicode_string("😐");
+    } else if (leader_sequence_three_keys(KC_T, KC_H, KC_I)) {
+      send_unicode_string("🤔");
+    } else if (leader_sequence_three_keys(KC_Z, KC_I, KC_P)) {
+      send_unicode_string("🤐");
+    } else if (leader_sequence_three_keys(KC_S, KC_U, KC_R)) {
+      send_unicode_string("😯");
+    } else if (leader_sequence_three_keys(KC_R, KC_O, KC_L)) {
+      send_unicode_string("🙄");
+    } else if (leader_sequence_three_keys(KC_M, KC_O, KC_O)) {
+      send_unicode_string("🌝");
+    } else if (leader_sequence_three_keys(KC_H, KC_U, KC_G)) {
+      send_unicode_string("🫂");
 
-    SEQ_THREE_KEYS(KC_H, KC_E, KC_N) {
-      send_unicode_string("🐔"); }
-    SEQ_THREE_KEYS(KC_R, KC_O, KC_O) {
-      send_unicode_string("🐓"); }
-    SEQ_THREE_KEYS(KC_D, KC_U, KC_C) {
-      send_unicode_string("🦆"); }
-    SEQ_THREE_KEYS(KC_P, KC_E, KC_A) {
-      send_unicode_string("🦚"); }
-    SEQ_THREE_KEYS(KC_B, KC_I, KC_R) {
-      send_unicode_string("🐦"); }
+    } else if (leader_sequence_three_keys(KC_H, KC_E, KC_N)) {
+      send_unicode_string("🐔");
+    } else if (leader_sequence_three_keys(KC_R, KC_O, KC_O)) {
+      send_unicode_string("🐓");
+    } else if (leader_sequence_three_keys(KC_D, KC_U, KC_C)) {
+      send_unicode_string("🦆");
+    } else if (leader_sequence_three_keys(KC_P, KC_E, KC_A)) {
+      send_unicode_string("🦚");
+    } else if (leader_sequence_three_keys(KC_B, KC_I, KC_R)) {
+      send_unicode_string("🐦");
 
     /* Subscript / superscript */
-    SEQ_THREE_KEYS(KC_U, KC_P, KC_N) {
-      send_unicode_string("⁰"); }
-    SEQ_THREE_KEYS(KC_D, KC_N, KC_N) {
-      send_unicode_string("₀"); }
-    SEQ_THREE_KEYS(KC_U, KC_P, KC_C) {
-      tap_code16(US_SUP1); }
-    SEQ_THREE_KEYS(KC_D, KC_N, KC_C) {
-      send_unicode_string("₁"); }
-    SEQ_THREE_KEYS(KC_U, KC_P, KC_G) {
-      tap_code16(US_SUP2); }
-    SEQ_THREE_KEYS(KC_D, KC_N, KC_G) {
-      send_unicode_string("₂"); }
-    SEQ_THREE_KEYS(KC_U, KC_P, KC_H) {
-      tap_code16(US_SUP3); }
-    SEQ_THREE_KEYS(KC_D, KC_N, KC_H) {
-      send_unicode_string("₃"); }
-    SEQ_THREE_KEYS(KC_U, KC_P, KC_T) {
-      send_unicode_string("⁴"); }
-    SEQ_THREE_KEYS(KC_D, KC_N, KC_T) {
-      send_unicode_string("₄"); }
-    SEQ_THREE_KEYS(KC_U, KC_P, KC_S) {
-      send_unicode_string("⁵"); }
-    SEQ_THREE_KEYS(KC_D, KC_N, KC_S) {
-      send_unicode_string("₅"); }
-    SEQ_THREE_KEYS(KC_U, KC_P, KC_R) {
-      send_unicode_string("⁶"); }
-    SEQ_THREE_KEYS(KC_D, KC_N, KC_R) {
-      send_unicode_string("₆"); }
-    SEQ_THREE_KEYS(KC_U, KC_P, KC_P) {
-      send_unicode_string("⁷"); }
-    SEQ_THREE_KEYS(KC_D, KC_N, KC_P) {
-      send_unicode_string("₇"); }
-    SEQ_THREE_KEYS(KC_U, KC_P, KC_D) {
-      send_unicode_string("⁸"); }
-    SEQ_THREE_KEYS(KC_D, KC_N, KC_D) {
-      send_unicode_string("₈"); }
-    SEQ_THREE_KEYS(KC_U, KC_P, KC_L) {
-      send_unicode_string("⁹"); }
-    SEQ_THREE_KEYS(KC_D, KC_N, KC_L) {
-      send_unicode_string("₉"); }
+    } else if (leader_sequence_three_keys(KC_U, KC_P, KC_N)) {
+      send_unicode_string("⁰");
+    } else if (leader_sequence_three_keys(KC_D, KC_N, KC_N)) {
+      send_unicode_string("₀");
+    } else if (leader_sequence_three_keys(KC_U, KC_P, KC_C)) {
+      tap_code16(US_SUP1);
+    } else if (leader_sequence_three_keys(KC_D, KC_N, KC_C)) {
+      send_unicode_string("₁");
+    } else if (leader_sequence_three_keys(KC_U, KC_P, KC_G)) {
+      tap_code16(US_SUP2);
+    } else if (leader_sequence_three_keys(KC_D, KC_N, KC_G)) {
+      send_unicode_string("₂");
+    } else if (leader_sequence_three_keys(KC_U, KC_P, KC_H)) {
+      tap_code16(US_SUP3);
+    } else if (leader_sequence_three_keys(KC_D, KC_N, KC_H)) {
+      send_unicode_string("₃");
+    } else if (leader_sequence_three_keys(KC_U, KC_P, KC_T)) {
+      send_unicode_string("⁴");
+    } else if (leader_sequence_three_keys(KC_D, KC_N, KC_T)) {
+      send_unicode_string("₄");
+    } else if (leader_sequence_three_keys(KC_U, KC_P, KC_S)) {
+      send_unicode_string("⁵");
+    } else if (leader_sequence_three_keys(KC_D, KC_N, KC_S)) {
+      send_unicode_string("₅");
+    } else if (leader_sequence_three_keys(KC_U, KC_P, KC_R)) {
+      send_unicode_string("⁶");
+    } else if (leader_sequence_three_keys(KC_D, KC_N, KC_R)) {
+      send_unicode_string("₆");
+    } else if (leader_sequence_three_keys(KC_U, KC_P, KC_P)) {
+      send_unicode_string("⁷");
+    } else if (leader_sequence_three_keys(KC_D, KC_N, KC_P)) {
+      send_unicode_string("₇");
+    } else if (leader_sequence_three_keys(KC_U, KC_P, KC_D)) {
+      send_unicode_string("⁸");
+    } else if (leader_sequence_three_keys(KC_D, KC_N, KC_D)) {
+      send_unicode_string("₈");
+    } else if (leader_sequence_three_keys(KC_U, KC_P, KC_L)) {
+      send_unicode_string("⁹");
+    } else if (leader_sequence_three_keys(KC_D, KC_N, KC_L)) {
+      send_unicode_string("₉");
   };
 }

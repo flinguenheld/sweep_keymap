@@ -4,14 +4,6 @@
 #include QMK_KEYBOARD_H
 #include "keycodes.h"
 
-/* Leader state */
-static bool is_leader_active = false;
-void leader_start(void) {
-    is_leader_active = true;
-}
-void leader_end(void) {
-    is_leader_active = false;
-}
 
 /* Blank space to place modifiers */
 void add_blank(void) {
@@ -350,7 +342,7 @@ void oled_display(void) {
     }
 
     /* Leader */
-    if (is_leader_active) {
+    if (leader_sequence_active()) {
 
         static const char PROGMEM qmk_leader[] = {
             0x00, 0x00, 0xf8, 0xf8, 0x78, 0x38, 0x18, 0x18, 0x18, 0x18, 0x18, 0x18, 0x18, 0x18, 0x18, 0x18,
