@@ -58,10 +58,10 @@ Set the us altgr international to activate French keys :
 ![left hand](./images/left_hand.png)
 
 ![combos_couple](./images/combos_couple.png)  
-![combos_home](./images/combos_home.png)  
+![combos_flat](./images/combos_flat.png)  
 ![combos_long](./images/combos_long.png)  
-![combos_leader](./images/combos_leader.png)  
 ![combos_french](./images/combos_french.png)
+![combos_leader](./images/combos_leader.png)
 
 #### Leader
 
