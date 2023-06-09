@@ -11,12 +11,14 @@ void leader_end_user(void) {
   } else if (leader_sequence_two_keys(KC_M, KC_L)) {
     SEND_STRING("florent@linguenheld.fr");
   } else if (leader_sequence_two_keys(KC_F, KC_L)) {
-    SEND_STRING("FLinguenheld");
+    SEND_STRING("flinguenheld");
 
   } else if (leader_sequence_three_keys(KC_D, KC_O, KC_T)) {
-    SEND_STRING("https://github.com/FLinguenheld/dotfiles");
+    SEND_STRING("https://github.com/flinguenheld/dotfiles");
   } else if (leader_sequence_three_keys(KC_H, KC_U, KC_B)) {
-    SEND_STRING("https://github.com/FLinguenheld");
+    SEND_STRING("https://github.com/flinguenheld/");
+  } else if (leader_sequence_three_keys(KC_Q, KC_M, KC_K)) {
+    SEND_STRING("$HOME/qmk_firmware/keyboards/splitkb/aurora/sweep/keymaps/sweep_keymap");
   } else if (leader_sequence_three_keys(KC_Q, KC_M, KC_C)) {
     SEND_STRING("qmk compile && qmk flash");
 
@@ -112,6 +114,10 @@ void leader_end_user(void) {
     send_unicode_string("≥");
 
     /* Greek */
+  } else if (leader_sequence_three_keys(KC_B, KC_E, KC_T)) {
+    tap_code16(US_SS); // ß
+  } else if (leader_sequence_three_keys(KC_M, KC_I, KC_C)) {
+    tap_code16(US_MICR); // µ
   } else if (leader_sequence_two_keys(KC_P, KC_I)) {
     send_unicode_string("π");
   } else if (leader_sequence_three_keys(KC_P, KC_I, KC_I)) {
