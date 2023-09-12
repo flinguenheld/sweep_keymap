@@ -38,10 +38,13 @@
 // #define UNICODE_SELECTED_MODES UC_LNX
 #define UNICODE_SELECTED_MODES UNICODE_MODE_LINUX
 
-/* leader */
+/* Leader */
 #define LEADER_PER_KEY_TIMING
 #define LEADER_TIMEOUT 280
 #define LEADER_NO_TIMEOUT
+
+/* Cap word */
+#define CAPS_WORD_IDLE_TIMEOUT 5000
 
 /* Mouse */
 #define MK_3_SPEED

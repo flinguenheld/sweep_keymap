@@ -24,6 +24,9 @@ enum combos {
   LAYER_MOUSE,
   LAYER_MOUSE_BACK,
 
+  CAP_WORD,
+  CAP_LOCK,
+
   /* French */
   C_CEDILLA,
   E_A,
@@ -98,7 +101,7 @@ uint16_t COMBO_LEN = COMBO_LENGTH;
 const uint16_t PROGMEM combo_leader[] = {LT(_MOUSE, KC_COMM), LT(_ARROWS, KC_DOT), COMBO_END};
 const uint16_t PROGMEM combo_bootloader[] = {KC_K, KC_TAB, KC_Z, KC_BSPC, KC_V, KC_J, COMBO_END};
 
-const uint16_t PROGMEM combo_ADJ[] = {CTL_T(KC_SPACE), LT(_NUMERIC, KC_ENT), COMBO_END};
+const uint16_t PROGMEM combo_adj[] = {CTL_T(KC_SPACE), LT(_NUMERIC, KC_ENT), COMBO_END};
 const uint16_t PROGMEM combo_fn[] = {LT(_NUMERIC, KC_ENT), KC_N, COMBO_END};
 const uint16_t PROGMEM combo_left_hand[] = {LT(_MOUSE, KC_COMM), GUI_T(KC_ESC), COMBO_END};
 const uint16_t PROGMEM combo_mouse[] = {KC_A, KC_I, KC_E, KC_U, COMBO_END};
@@ -107,6 +110,9 @@ const uint16_t PROGMEM combo_mouse_back[] = {KC_MS_LEFT, KC_MS_UP, KC_MS_DOWN, K
 const uint16_t PROGMEM combo_c_cedilla[] = {LT(_ARROWS, KC_DOT), KC_C, COMBO_END};
 const uint16_t PROGMEM combo_ea[] = {US_EACU, KC_A, COMBO_END};
 const uint16_t PROGMEM combo_eo[] = {US_EACU, KC_O, COMBO_END};
+
+const uint16_t PROGMEM combo_cap_word[] = {LT(_NUMERIC, KC_ENT), KC_T, COMBO_END};
+const uint16_t PROGMEM combo_cap_lock[] = {LT(_NUMERIC, KC_ENT), KC_C, COMBO_END};
 
 const uint16_t PROGMEM combo_a_grave[] = {CTL_T(KC_SPACE), KC_A, COMBO_END};
 const uint16_t PROGMEM combo_e_grave[] = {CTL_T(KC_SPACE), KC_E, COMBO_END};
@@ -172,11 +178,14 @@ combo_t key_combos[] = {
     [LEADER] = COMBO(combo_leader, QK_LEAD),
     [BOOTLOADER] = COMBO(combo_bootloader, QK_BOOTLOADER),
 
-    [LAYER_ADJ] = COMBO(combo_ADJ, OSL(_ADJ)),
+    [LAYER_ADJ] = COMBO(combo_adj, OSL(_ADJ)),
     [LAYER_FN] = COMBO(combo_fn, OSL(_FN)),
     [LAYER_LEFT_HAND] = COMBO(combo_left_hand, OSL(_LEFT_HAND)),
     [LAYER_MOUSE] = COMBO(combo_mouse, TG(_MOUSE)),
     [LAYER_MOUSE_BACK] = COMBO(combo_mouse_back, TG(_MOUSE)),
+
+    [CAP_WORD] = COMBO(combo_cap_word, QK_CAPS_WORD_TOGGLE),
+    [CAP_LOCK] = COMBO(combo_cap_lock, KC_CAPS_LOCK),
 
     /* French */
     [C_CEDILLA] = COMBO(combo_c_cedilla, US_CCED),

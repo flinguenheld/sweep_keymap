@@ -27,6 +27,8 @@ void leader_end_user(void) {
   } else if (leader_sequence_three_keys(KC_A, KC_D, KC_M)) {
     SEND_STRING("admin01234");
 
+  } else if (leader_sequence_two_keys(KC_U, KC_S)) {
+    SEND_STRING("setxkbmap us altgr-intl");
   } else if (leader_sequence_one_key(KC_C)) {
     SEND_STRING(" | xclip -r -selection clipboard");
 
