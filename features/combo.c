@@ -51,6 +51,7 @@ enum combos {
   AMPERSAND,
   AT_SIGN,
   BACKSLASH,
+  BACKSLASH_2,
   CIRCUMFLEX,
   COLON,
   DOLLAR,
@@ -67,6 +68,7 @@ enum combos {
   QUOTE_DOUBLE,
   SEMICOLON,
   SLASH,
+  SLASH_2,
   STAR,
   TILDE,
   UNDERSCORE,
@@ -132,7 +134,8 @@ const uint16_t PROGMEM combo_y_diaeresis[] = {US_EACU, KC_Y, COMBO_END};
 /* -- */
 const uint16_t PROGMEM combo_ampersand[] = {KC_E, KC_U, COMBO_END};
 const uint16_t PROGMEM combo_at_sign[] = {KC_D, KC_L, COMBO_END};
-const uint16_t PROGMEM combo_backslash[] = {KC_B, KC_E, COMBO_END};
+const uint16_t PROGMEM combo_backslash[] = {KC_P, KC_S, COMBO_END};
+const uint16_t PROGMEM combo_backslash_2[] = {KC_B, KC_E, COMBO_END};
 const uint16_t PROGMEM combo_circumflex[] = {KC_B, KC_O, COMBO_END};
 const uint16_t PROGMEM combo_colon[] = {KC_C, KC_G, COMBO_END};
 const uint16_t PROGMEM combo_dollar[] = {KC_O, KC_W, COMBO_END};
@@ -149,6 +152,7 @@ const uint16_t PROGMEM combo_quote[] = {KC_T, KC_N, COMBO_END};
 const uint16_t PROGMEM combo_quote_double[] = {KC_A, KC_U, COMBO_END};
 const uint16_t PROGMEM combo_semicolon[] = {KC_G, KC_H, COMBO_END};
 const uint16_t PROGMEM combo_slash[] = {KC_S, KC_L, COMBO_END};
+const uint16_t PROGMEM combo_slash_2[] = {KC_E, KC_W, COMBO_END};
 const uint16_t PROGMEM combo_star[] = {KC_S, KC_T, COMBO_END};
 const uint16_t PROGMEM combo_tilde[] = {KC_I, KC_U, COMBO_END};
 const uint16_t PROGMEM combo_underscore[] = {KC_S, KC_R, COMBO_END};
@@ -211,6 +215,7 @@ combo_t key_combos[] = {
     [AMPERSAND] = COMBO(combo_ampersand, KC_AMPERSAND),
     [AT_SIGN] = COMBO(combo_at_sign, KC_AT),
     [BACKSLASH] = COMBO(combo_backslash, KC_BACKSLASH),
+    [BACKSLASH_2] = COMBO(combo_backslash_2, KC_BACKSLASH),
     [CIRCUMFLEX] = COMBO(combo_circumflex, KC_CIRCUMFLEX),
     [COLON] = COMBO(combo_colon, KC_COLON),
     [DOLLAR] = COMBO(combo_dollar, KC_DOLLAR),
@@ -227,6 +232,7 @@ combo_t key_combos[] = {
     [QUOTE_DOUBLE] = COMBO(combo_quote_double, KC_DOUBLE_QUOTE),
     [SEMICOLON] = COMBO(combo_semicolon, KC_SEMICOLON),
     [SLASH] = COMBO(combo_slash, KC_SLASH),
+    [SLASH_2] = COMBO(combo_slash_2, KC_SLASH),
     [STAR] = COMBO(combo_star, KC_ASTERISK),
     [TILDE] = COMBO(combo_tilde, KC_TILDE),
     [UNDERSCORE] = COMBO(combo_underscore, KC_UNDERSCORE),

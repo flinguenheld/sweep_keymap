@@ -30,7 +30,7 @@ void leader_end_user(void) {
   } else if (leader_sequence_two_keys(KC_U, KC_S)) {
     SEND_STRING("setxkbmap us altgr-intl");
   } else if (leader_sequence_one_key(KC_C)) {
-    SEND_STRING(" | xclip -r -selection clipboard");
+    SEND_STRING(" | wl-copy --trim-newline");
 
     /* Keyring requests, improbable combinaisons used by i3 */
   } else if (leader_sequence_three_keys(KC_G, KC_I, KC_T)) {
