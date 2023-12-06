@@ -75,13 +75,19 @@ enum combos {
 
   ANGLE_BRACKET_LEFT,
   ANGLE_BRACKET_RIGHT,
+  ANGLE_BRACKET_LEFTRIGHT,
 
   BRACKET_LEFT,
   BRACKET_RIGHT,
+  BRACKET_LEFTRIGHT,
+
   CURLY_BRACKET_LEFT,
   CURLY_BRACKET_RIGHT,
+  CURLY_BRACKET_LEFTRIGHT,
+
   PARENTHESIS_LEFT,
   PARENTHESIS_RIGHT,
+  PARENTHESIS_LEFTRIGHT,
 
   /* Non qwerty */
   EURO,
@@ -159,12 +165,19 @@ const uint16_t PROGMEM combo_underscore[] = {KC_S, KC_R, COMBO_END};
 
 const uint16_t PROGMEM combo_angle_bracket_left[] = {KC_C, KC_S, COMBO_END};
 const uint16_t PROGMEM combo_angle_bracket_right[] = {KC_S, KC_H, COMBO_END};
+const uint16_t PROGMEM combo_angle_bracket_leftright[] = {KC_C, KC_H, COMBO_END};
+
 const uint16_t PROGMEM combo_bracket_left[] = {KC_I, KC_O, COMBO_END};
 const uint16_t PROGMEM combo_bracket_right[] = {KC_O, KC_U, COMBO_END};
+const uint16_t PROGMEM combo_bracket_leftright[] = {KC_B, KC_W, COMBO_END};
+
 const uint16_t PROGMEM combo_curly_bracket_left[] = {KC_X, KC_E, COMBO_END};
 const uint16_t PROGMEM combo_curly_bracket_right[] = {KC_E, KC_Y, COMBO_END};
+const uint16_t PROGMEM combo_curly_bracket_leftright[] = {KC_X, KC_Y, COMBO_END};
+
 const uint16_t PROGMEM combo_parenthesis_left[] = {KC_T, KC_D, COMBO_END};
 const uint16_t PROGMEM combo_parenthesis_right[] = {KC_D, KC_R, COMBO_END};
+const uint16_t PROGMEM combo_parenthesis_leftright[] = {KC_P, KC_L, COMBO_END};
 
 /* Non qwerty */
 const uint16_t PROGMEM combo_euro[] = {KC_X, KC_Q, COMBO_END};
@@ -239,13 +252,19 @@ combo_t key_combos[] = {
 
     [ANGLE_BRACKET_LEFT] = COMBO(combo_angle_bracket_left, KC_LEFT_ANGLE_BRACKET),
     [ANGLE_BRACKET_RIGHT] = COMBO(combo_angle_bracket_right, KC_RIGHT_ANGLE_BRACKET),
+    [ANGLE_BRACKET_LEFTRIGHT] = COMBO_ACTION(combo_angle_bracket_leftright),
 
     [BRACKET_LEFT] = COMBO(combo_bracket_left, KC_LEFT_BRACKET),
     [BRACKET_RIGHT] = COMBO(combo_bracket_right, KC_RIGHT_BRACKET),
+    [BRACKET_LEFTRIGHT] = COMBO_ACTION(combo_bracket_leftright),
+
     [CURLY_BRACKET_LEFT] = COMBO(combo_curly_bracket_left, KC_LEFT_CURLY_BRACE),
     [CURLY_BRACKET_RIGHT] = COMBO(combo_curly_bracket_right, KC_RIGHT_CURLY_BRACE),
+    [CURLY_BRACKET_LEFTRIGHT] = COMBO_ACTION(combo_curly_bracket_leftright),
+
     [PARENTHESIS_LEFT] = COMBO(combo_parenthesis_left, KC_LEFT_PAREN),
     [PARENTHESIS_RIGHT] COMBO(combo_parenthesis_right, KC_RIGHT_PAREN),
+    [PARENTHESIS_LEFTRIGHT] COMBO_ACTION(combo_parenthesis_leftright),
 
     /* Non qwerty */
     [EURO] COMBO(combo_euro, US_EURO),
@@ -258,3 +277,33 @@ combo_t key_combos[] = {
     [SHIFT_LEFT] = COMBO(combo_shift_left, KC_LSFT),
     [CONTROL_SHIFT_LEFT] = COMBO(combo_control_shift_left, C(S(XXXXXXX))),
 };
+
+/* Parenthesis left/right */
+void process_combo_event(uint16_t combo_index, bool pressed) {
+  switch (combo_index) {
+  case ANGLE_BRACKET_LEFTRIGHT:
+    if (pressed) {
+      tap_code16(KC_LEFT_ANGLE_BRACKET);
+      tap_code16(KC_RIGHT_ANGLE_BRACKET);
+    }
+    break;
+  case BRACKET_LEFTRIGHT:
+    if (pressed) {
+      tap_code16(KC_LEFT_BRACKET);
+      tap_code16(KC_RIGHT_BRACKET);
+    }
+    break;
+  case CURLY_BRACKET_LEFTRIGHT:
+    if (pressed) {
+      tap_code16(KC_LEFT_CURLY_BRACE);
+      tap_code16(KC_RIGHT_CURLY_BRACE);
+    }
+    break;
+  case PARENTHESIS_LEFTRIGHT:
+    if (pressed) {
+      tap_code16(KC_LEFT_PAREN);
+      tap_code16(KC_RIGHT_PAREN);
+    }
+    break;
+  }
+}
