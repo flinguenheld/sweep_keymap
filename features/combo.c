@@ -31,6 +31,9 @@ enum combos {
   E_GRAVE,
   U_GRAVE,
   C_CEDILLA,
+  // FR_GRAVE,
+  // FR_DIAERESIS,
+  // FR_CIRCUMFLEX,
 
   /* -- */
   AMPERSAND,
@@ -107,6 +110,9 @@ const uint16_t PROGMEM combo_a_grave[] = {LT(_MOUSE, KC_COMM), KC_A, COMBO_END};
 const uint16_t PROGMEM combo_e_grave[] = {LT(_MOUSE, KC_COMM), KC_E, COMBO_END};
 const uint16_t PROGMEM combo_u_grave[] = {LT(_MOUSE, KC_COMM), KC_U, COMBO_END};
 const uint16_t PROGMEM combo_c_cedilla[] = {LT(_ARROWS, KC_DOT), KC_C, COMBO_END};
+// const uint16_t PROGMEM combo_fr_grave[] = {LT(_ARROWS, KC_DOT),  KC_G, COMBO_END};
+// const uint16_t PROGMEM combo_fr_circumflex[] = {LT(_ARROWS, KC_DOT),  KC_F, COMBO_END};
+// const uint16_t PROGMEM combo_fr_diaeresis[] = {LT(_ARROWS, KC_DOT),  KC_T, COMBO_END};
 
 /* -- */
 const uint16_t PROGMEM combo_ampersand[] = {KC_E, KC_U, COMBO_END};
@@ -179,6 +185,9 @@ combo_t key_combos[] = {
     [E_GRAVE] = COMBO(combo_e_grave, CS_E_GRAVE),
     [U_GRAVE] = COMBO(combo_u_grave, CS_U_GRAVE),
     [C_CEDILLA] = COMBO(combo_c_cedilla, US_CCED),
+    // [FR_GRAVE] = COMBO(combo_fr_grave, US_DGRV),
+    // [FR_DIAERESIS] = COMBO(combo_fr_diaeresis, US_DIAE),
+    // [FR_CIRCUMFLEX] = COMBO(combo_fr_circumflex, US_DCIR),
 
     /* -- */
     [AMPERSAND] = COMBO(combo_ampersand, KC_AMPERSAND),
