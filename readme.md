@@ -1,6 +1,6 @@
 ### Custom aurora sweep keymap
 
-This keymap is inspired by [optimot](https://optimot.fr) which is a French layout.  
+This keymap is inspired by [optimot](https://optimot.fr) which is a French layout.\
 Nonetheless it uses the US international extended keymap for French keys.
 
 It uses the _best_ qmk features :
@@ -9,7 +9,7 @@ It uses the _best_ qmk features :
 - auto shift
 - leader
 
-I tried to optimise key positions for neovim and i3wm while limit digrams.  
+I tried to optimise key positions for neovim and i3wm while limit digrams.\
 The oled screens are used to display the current layout, the modifier keys and the leader key.
 
 ![oledmodifiers](https://i.imgur.com/on95jx0.png)
@@ -43,55 +43,70 @@ Set the us altgr international to activate French keys :
 
 #### Links
 
-[qmk](https://docs.qmk.fm/#/)  
-[ferris sweep](https://github.com/davidphilipbarr/Sweep)  
+[qmk](https://docs.qmk.fm/#/)\
+[ferris sweep](https://github.com/davidphilipbarr/Sweep)\
 [splitkb](https://splitkb.com)
 
 #### Layouts
 
-![base](./images/base.png)  
-![numeric](./images/numeric.png)  
-![mouse](./images/mouse.png)  
-![arrows](./images/arrows.png)  
-![adjust](./images/adjust.png)  
-![fn](./images/fn.png)  
+![base](./images/base.png)\
+![numeric](./images/numeric.png)\
+![arrows](./images/arrows.png)\
+![fn](./images/fn.png)\
+![mouse](./images/mouse.png)\
 ![left hand](./images/left_hand.png)
+![adjust](./images/adjust.png)
 
 ![combos](./images/combos.png)
 
 #### Leader
 
-| -             |            |
-| ------------- | ---------- |
-| M + S         | mail short |
-| M + L         | mail long  |
-| D + E + G     | °          |
-| C + O + P     | ©          |
-| R + E + G     | ®          |
-| D + I + A     | ø          |
-| D + I + A + M | Ø          |
-| E + U + R     | €          |
-| P + O + U     | £          |
-| Y + E + N     | ¥          |
-| C + E + N     | ¢          |
-| P + I         | π          |
-| P + I + I     | Π          |
-| O + M + E     | ω          |
-| O + M + E + G | Ω          |
-| U + P + F     | ⁰          |
-| D + N + F     | ₀          |
+| -         |   |
+| --------- | - |
+| C + O + P | © |
+| R + E + G | ® |
+| D + I + A | ø |
+| D + E + G | ° |
+| S + E + C | § |
+| P + O + U | £ |
+| Y + E + N | ¥ |
+| C + E + N | ¢ |
+| B + E + T | ß |
+| M + I + C | µ |
+| P + I     | π |
+| O + M + E | Ω |
+| U + P + F | ⁰ |
+| D + N + F | ₀ |
 
-| -         |     |
-| --------- | --- |
-| M + U + L | ×   |
-| D + I + V | ÷   |
-| P + M     | ±   |
-| I + N + E | ≠   |
-| A + L + M | ≈   |
-| S + Q + U | √   |
-| I + N + F | ∞   |
-| < + <     | ≤   |
-| > + >     | ≥   |
-| F + S + T | ¼   |
-| F + S + G | ½   |
-| F + H + T | ¾   |
+| -         |   |
+| --------- | - |
+| M + U + L | × |
+| D + I + V | ÷ |
+| P + M     | ± |
+| I + N + E | ≠ |
+| A + L + M | ≈ |
+| S + Q + U | √ |
+| I + N + F | ∞ |
+| < + <     | ≤ |
+| > + >     | ≥ |
+| F + C + T | ¼ |
+| F + C + G | ½ |
+| F + H + T | ¾ |
+
+| -         |    |
+| --------- | -- |
+| L + O + V | ♥  |
+| F + L + A | ⚡ |
+| S + T + A | ✶  |
+| B + U + L | 💡 |
+| I + N + F | ℹ️  |
+| G + E + A | ⚙️  |
+| V         | ✓  |
+| V + B     | ✔  |
+| V + V     | ✅ |
+| X         | ✗  |
+| X + B     | ✘  |
+| ?         | ❔ |
+| ? + ?     | ❓ |
+| !         | ❕ |
+| ! + !     | ❗ |

@@ -122,12 +122,7 @@ void leader_end_user(void) {
     tap_code16(US_MICR); // µ
   } else if (leader_sequence_two_keys(KC_P, KC_I)) {
     send_unicode_string("π");
-  } else if (leader_sequence_three_keys(KC_P, KC_I, KC_I)) {
-    send_unicode_string("Π");
-
   } else if (leader_sequence_three_keys(KC_O, KC_M, KC_E)) {
-    send_unicode_string("ω");
-  } else if (leader_sequence_four_keys(KC_O, KC_M, KC_E, KC_G)) {
     send_unicode_string("Ω");
 
     /* Icons */
@@ -139,7 +134,7 @@ void leader_end_user(void) {
     send_unicode_string("✶");
   } else if (leader_sequence_three_keys(KC_B, KC_U, KC_L)) {
     send_unicode_string("💡");
-  } else if (leader_sequence_four_keys(KC_I, KC_N, KC_F, KC_O)) {
+  } else if (leader_sequence_three_keys(KC_I, KC_N, KC_F)) {
     send_unicode_string("ℹ️");
   } else if (leader_sequence_three_keys(KC_G, KC_E, KC_A)) {
     send_unicode_string("⚙️");
